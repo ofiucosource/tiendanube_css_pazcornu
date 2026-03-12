@@ -9,11 +9,16 @@ Archivos incluidos:
 - 03-direccion-visual-zara.md: lineamientos esteticos para futuras iteraciones, inspirados en Zara pero aterrizados al proyecto actual.
 - 04-guidelines-diseno-editorial.md: sistema de criterios visuales y de interaccion para mantener consistencia en navbar, dropdowns, producto y grilla.
 
+Nota importante:
+
+- Despues de la unificacion de listados, `02-mapa-selectores-theme-actual.md` tambien documenta scopes validados en preview para category, subcategory, collection, search, filtros y paginacion. Ese archivo debe ser la primera referencia antes de abrir nuevos selectores.
+
 Uso recomendado:
 
 1. Leer primero 01-tiendanube-morelia-contexto.md.
 2. Validar cualquier cambio contra 02-mapa-selectores-theme-actual.md.
-3. Usar 03-direccion-visual-zara.md para decidir tono visual y prioridades de refinamiento.
+3. Usar 04-guidelines-diseno-editorial.md para mantener coherencia visual y evitar abrir caminos no validados.
+4. Usar 03-direccion-visual-zara.md para decidir tono visual y prioridades de refinamiento.
 
 Conclusion operativa:
 

@@ -67,6 +67,13 @@ Definir una base visual consistente para futuras iteraciones del CSS, tomando co
   - color gris medio
   - espaciado corto y prolijo
 
+### Categorias y subcategorias
+
+- Las paginas de listado deben verse como extension natural del home, no como otro theme.
+- Cards, precios y CTAs deben compartir exactamente el mismo lenguaje visual de la home cuando el markup lo permita.
+- Navegacion lateral, filtros y paginacion deben sentirse silenciosos y funcionales, nunca mas protagonistas que la grilla.
+- Si una categoria usa un wrapper distinto, primero se valida en preview y luego se suma como scope compatibile, en lugar de asumir markup generico.
+
 ## Producto
 
 ### Detalle de producto
@@ -97,6 +104,14 @@ Definir una base visual consistente para futuras iteraciones del CSS, tomando co
 - Priorizar hooks estables como `data-store` cuando sea posible.
 - Evitar depender de clases `js-*` salvo que no exista alternativa segura.
 - Antes de subir contraste o peso, probar primero con espaciado y jerarquia estructural.
+- En listados, reutilizar primero los scopes ya validados en preview antes de abrir nuevos fallbacks.
+
+## Regla anti-alucinacion para futuras iteraciones
+
+- No asumir que una pagina de categoria usa el mismo wrapper que home solo por similitud visual.
+- No abrir un selector nuevo para listados sin comprobar antes si ya existe un scope validado en `02-mapa-selectores-theme-actual.md`.
+- Si un bloque toca cards, filtros o paginacion, se prueba primero sobre hooks de item y wrappers ya confirmados en preview.
+- Cuando haya duda entre `data-store` y una clase `js-*`, se elige `data-store` primero.
 
 ## Anti-patrones
 
@@ -106,6 +121,7 @@ Definir una base visual consistente para futuras iteraciones del CSS, tomando co
 - Tipografia decorativa fuera de sistema.
 - Menus comprimidos o con columnas demasiado angostas.
 - CTAs que visualmente gritan mas que el producto.
+- CSS nuevo basado en wrappers no verificados cuando ya existen scopes validados.
 
 ## Resumen operativo
 

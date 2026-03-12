@@ -69,6 +69,69 @@ Traducir los selectores usados hoy en `theme.css` a su significado funcional y a
 | `[data-store="product-item-buy-now"]` | compra inmediata | hook oficial storefront | Alta | puede no existir segun configuracion |
 | `.js-addtocart-placeholder-inline` | placeholder inline en cards | `grid/item.tpl` placeholder | Media | no aparece en tu CSS pero es vecino funcional |
 
+## Categorias / subcategorias / listados
+
+### Hooks validados en preview durante la implementacion
+
+Los siguientes scopes quedaron validados como compatibles con la unificacion visual de cards y listados. No todos necesariamente aparecen a la vez, pero ya fueron contemplados como grupo de trabajo real sobre la tienda:
+
+- `.js-products-grid`
+- `.products-grid`
+- `.product-table`
+- `.js-product-table`
+- `.js-category-products`
+- `[data-store="category-products"]`
+- `[data-store="products-list"]`
+- `[data-store="search-results"]`
+
+Lectura practica:
+
+- Para futuras iteraciones de grilla/listado, conviene empezar por estos scopes antes de inventar wrappers nuevos.
+- Dentro de esos scopes, la familia `.item-*` y los hooks `data-store="product-item-*"` ya demostraron ser el camino mas consistente.
+
+### Sidebar / filtros / navegacion interna
+
+Los siguientes wrappers quedaron aceptados como capa de compatibilidad para navegacion lateral, filtros y facets:
+
+- `.js-products-sidebar`
+- `.js-filters-container`
+- `.js-products-filters`
+- `.sidebar-filters`
+- `.filters-container`
+- `.category-sidebar`
+- `.collection-sidebar`
+- `.js-products-categories`
+- `.js-category-sidebar`
+
+Estabilidad:
+
+- `Media` como wrappers visuales.
+- Son utiles para tipografia, spacing, bordes y estados activos.
+- No conviene asumir que controlan comportamiento JS; sirven como scope visual, no como contrato funcional.
+
+### Paginacion y controles de listado
+
+Wrappers contemplados para mantener consistencia visual en listados:
+
+- `.pagination`
+- `.js-pagination`
+- `.pagination-container`
+- `.js-pagination-container`
+- `.pager`
+- `.js-pager`
+- `.sort-by`
+- `.js-sort-by`
+- `.js-view-change`
+- `.js-products-order-by`
+- `.js-products-controls`
+- `.products-controls`
+
+Estabilidad:
+
+- `Media` para paginacion y sorting.
+- Seguros para tipografia, border, hover y spacing.
+- Evitar cambiar display estructural o logica de visibilidad sin validar comportamiento del theme.
+
 ## Relacion directa con docs oficiales
 
 ### Bloques del CSS actual fuertemente respaldados
@@ -85,6 +148,10 @@ Traducir los selectores usados hoy en `theme.css` a su significado funcional y a
 - `.js-quantity-*`
 - `.product-description`
 - `.section-featured-home`
+- `.js-products-grid`
+- `.products-grid`
+- `[data-store="category-products"]`
+- `[data-store="products-list"]`
 - `.item-name`
 - `.item-price-container`
 - `[data-store="product-item-buy-button"]`
@@ -134,6 +201,20 @@ Priorizar esta jerarquia:
 3. `[data-store^="product-name-"]`, `[data-store^="product-item-name-"]`, `[data-store^="product-item-price-"]`, `[data-store="product-buy-button"]`, `[data-store="product-item-buy-button"]`
 4. clases documentadas del componente
 5. clases `js-...` solo cuando no haya mejor hook
+
+## Regla de implementacion ya validada
+
+Para paginas de categoria, subcategoria, coleccion y busqueda, el orden de decision que ya funciono en esta tienda es:
+
+1. Scope de listado validado en preview (`.js-products-grid`, `.products-grid`, `.product-table`, `[data-store="category-products"]`, `[data-store="products-list"]`, `[data-store="search-results"]`)
+2. Hooks oficiales de item (`[data-store^="product-item-name-"]`, `[data-store^="product-item-price-"]`, `[data-store="product-item-buy-button"]`, `[data-store="product-item-buy-now"]`)
+3. Clases `.item-*` como soporte estructural
+4. Wrappers de sidebar/filtros/paginacion como capa visual secundaria
+
+Regla operativa:
+
+- Si un cambio de grilla no entra por ese orden, hay que asumir que todavia falta evidencia y conviene inspeccionar preview antes de seguir.
+- Esto baja bastante el riesgo de alucinacion porque obliga a partir de hooks ya comprobados en la tienda real.
 
 ## Conclusiones
 
