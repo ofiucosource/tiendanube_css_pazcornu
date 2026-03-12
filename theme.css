@@ -539,13 +539,13 @@
 #single-product[data-store="product-detail"] [data-store="product-buy-button"],
 #single-product[data-store="product-detail"] [data-component="product.add-to-cart"],
 #single-product[data-store="product-detail"] .js-addtocart-placeholder {
-  min-height: 48px !important;
-  font-size: 11px !important;
-  font-weight: 400 !important;
-  letter-spacing: 0.14em !important;
+  min-height: 44px !important;
+  font-size: 10px !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.13em !important;
   text-transform: uppercase !important;
   background-color: transparent !important;
-  border: 1px solid #111111 !important;
+  border: 0.9px solid #111111 !important;
   border-radius: 0 !important;
   color: #111111 !important;
   transition: background-color 0.25s ease, color 0.25s ease !important;
@@ -707,15 +707,73 @@
 }
 
 .section-featured-home .item-image-container,
+.section-featured-home .product-item-image-container,
 .js-products-grid .item-image-container,
+.js-products-grid .product-item-image-container,
 .products-grid .item-image-container,
+.products-grid .product-item-image-container,
 .product-table .item-image-container,
+.product-table .product-item-image-container,
 .js-product-table .item-image-container,
+.js-product-table .product-item-image-container,
 .js-category-products .item-image-container,
+.js-category-products .product-item-image-container,
 [data-store="category-products"] .item-image-container,
+[data-store="category-products"] .product-item-image-container,
 [data-store="products-list"] .item-image-container,
-[data-store="search-results"] .item-image-container {
+[data-store="products-list"] .product-item-image-container,
+[data-store="search-results"] .item-image-container,
+[data-store="search-results"] .product-item-image-container,
+[data-store^="product-item-image-"] {
+  position: relative !important;
   overflow: hidden !important;
+}
+
+.section-featured-home [data-store="product-item-labels"],
+.js-products-grid [data-store="product-item-labels"],
+.products-grid [data-store="product-item-labels"],
+.product-table [data-store="product-item-labels"],
+.js-product-table [data-store="product-item-labels"],
+.js-category-products [data-store="product-item-labels"],
+[data-store="category-products"] [data-store="product-item-labels"],
+[data-store="products-list"] [data-store="product-item-labels"],
+[data-store="search-results"] [data-store="product-item-labels"] {
+  position: absolute !important;
+  left: 12px !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 12px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 0 !important;
+  z-index: 1001 !important;
+}
+
+.section-featured-home [data-store="product-item-label-shipping"],
+.js-products-grid [data-store="product-item-label-shipping"],
+.products-grid [data-store="product-item-label-shipping"],
+.product-table [data-store="product-item-label-shipping"],
+.js-product-table [data-store="product-item-label-shipping"],
+.js-category-products [data-store="product-item-label-shipping"],
+[data-store="category-products"] [data-store="product-item-label-shipping"],
+[data-store="products-list"] [data-store="product-item-label-shipping"],
+[data-store="search-results"] [data-store="product-item-label-shipping"] {
+  position: relative !important;
+  inset: auto !important;
+  margin: 0 !important;
+  padding: 0.35rem 0.55rem !important;
+  background-color: #111111 !important;
+  color: #ffffff !important;
+  font-family: inherit !important;
+  font-size: 9px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.06em !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  white-space: nowrap !important;
 }
 
 .section-featured-home .item-image,
@@ -876,15 +934,15 @@
   justify-content: center !important;
   gap: 0.3rem !important;
   min-height: auto !important;
-  padding: 0.5rem 0.75rem !important;
+  padding: 0.4rem 0.65rem !important;
   margin-top: 0.15rem !important;
   background-color: transparent !important;
-  border: 1px solid #111111 !important;
+  border: 0.9px solid #111111 !important;
   border-radius: 0 !important;
   color: #111111 !important;
-  font-size: 10px !important;
-  font-weight: 400 !important;
-  letter-spacing: 0.12em !important;
+  font-size: 9px !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.13em !important;
   line-height: 1 !important;
   text-decoration: none !important;
   text-transform: uppercase !important;
