@@ -1,8 +1,146 @@
 /* =========================
    ESTILO GENERAL
-   PRODUCTO + GRILLA HOME
+   NAVBAR + PRODUCTO + GRILLA HOME
    Tiendanube / Morelia-Rio
    ========================= */
+
+/* ========================================
+   NAVBAR / HEADER
+   EDITORIAL + SILENCIO VISUAL
+   ======================================== */
+
+/* ---- Barra informativa superior ---- */
+
+.head-info,
+.js-head-info,
+.js-informative-banner {
+  font-size: 10px !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  font-weight: 300 !important;
+  line-height: 1.4 !important;
+}
+
+/* ---- Header principal ---- */
+
+.head-main,
+.js-head-main {
+  border-bottom: 1px solid #e6e6e6 !important;
+  box-shadow: none !important;
+}
+
+/* ---- Logo ---- */
+
+.logo-img-container {
+  padding-top: 0.35rem !important;
+  padding-bottom: 0.3rem !important;
+}
+
+.logo-img {
+  max-height: 56px !important;
+  transition: opacity 0.2s ease !important;
+}
+
+/* ---- Iconos de utilidades (buscar, usuario, carrito) ---- */
+
+.utilities-container,
+.js-utilities-container {
+  font-size: 0 !important;
+}
+
+.utilities-container a,
+.utilities-container button,
+.js-utilities-container a,
+.js-utilities-container button,
+.head-main .js-search-container a,
+.head-main .js-search-container button {
+  color: #111111 !important;
+  opacity: 0.72 !important;
+  transition: opacity 0.2s ease !important;
+}
+
+.utilities-container a:hover,
+.utilities-container button:hover,
+.js-utilities-container a:hover,
+.js-utilities-container button:hover,
+.head-main .js-search-container a:hover,
+.head-main .js-search-container button:hover {
+  opacity: 1 !important;
+}
+
+/* Carrito: badge discreto */
+.js-cart-widget .js-cart-count,
+.head-cart .js-cart-count {
+  font-size: 9px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* ---- Navegacion desktop ---- */
+
+.nav-desktop,
+.js-nav-desktop,
+.desktop-nav {
+  border-top: none !important;
+  border-bottom: none !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.nav-desktop .nav-item a,
+.js-nav-desktop .nav-item a,
+.desktop-nav .nav-item a {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.13em !important;
+  text-transform: uppercase !important;
+  color: #111111 !important;
+  padding: 0.35rem 0.9rem !important;
+  transition: opacity 0.2s ease !important;
+  opacity: 0.8 !important;
+}
+
+.nav-desktop .nav-item a:hover,
+.js-nav-desktop .nav-item a:hover,
+.desktop-nav .nav-item a:hover {
+  opacity: 1 !important;
+  color: #111111 !important;
+  background-color: transparent !important;
+  text-decoration: none !important;
+}
+
+.nav-desktop .nav-item a:active,
+.js-nav-desktop .nav-item a:active,
+.desktop-nav .nav-item a:active {
+  opacity: 1 !important;
+  color: #111111 !important;
+}
+
+/* Separacion visual entre header y contenido */
+.head-main + *,
+.js-head-main + * {
+  margin-top: 0 !important;
+}
+
+/* ---- Search overlay / input ---- */
+
+.js-search-input,
+.head-main input[type="search"],
+.head-main input[type="text"].js-search-input {
+  font-size: 12px !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.04em !important;
+  color: #111111 !important;
+  border-radius: 0 !important;
+  border-color: #c8c8c8 !important;
+}
+
+.js-search-input::placeholder {
+  color: #999999 !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: none !important;
+}
 
 /* ========================================
    DETALLE DE PRODUCTO
@@ -422,6 +560,39 @@
    ======================================== */
 
 @media (max-width: 768px) {
+
+  /* ---- Navbar mobile ---- */
+
+  .head-info,
+  .js-head-info,
+  .js-informative-banner {
+    font-size: 9px !important;
+    letter-spacing: 0.1em !important;
+  }
+
+  .logo-img {
+    max-height: 48px !important;
+  }
+
+  .logo-img-container {
+    padding-top: 0.3rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+
+  /* Nav mobile slide / hamburger links */
+  .js-mobile-nav a,
+  .mobile-nav a,
+  .js-nav-mobile a {
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    color: #111111 !important;
+    padding: 0.75rem 1.2rem !important;
+  }
+
+  /* ---- Producto detalle mobile ---- */
+
   #single-product[data-store="product-detail"] .page-header h1,
   #single-product[data-store="product-detail"] .page-header [data-store^="product-name-"] {
     font-size: 18px !important;
