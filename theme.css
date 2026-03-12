@@ -116,6 +116,211 @@
   color: #111111 !important;
 }
 
+/* ---- Dropdown / Submenu desktop ---- */
+
+/* Contenedor principal del dropdown */
+.desktop-list-subitems {
+  background-color: #ffffff !important;
+  border: none !important;
+  border-top: 1px solid #e6e6e6 !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06) !important;
+  padding: 1.75rem 2.25rem 1.9rem !important;
+  min-width: 0 !important;
+  width: max-content !important;
+  max-width: min(960px, calc(100vw - 48px)) !important;
+  animation: dropdownFadeIn 0.2s ease forwards !important;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Layout en columnas cuando hay multiples categorias */
+.desktop-list-subitems > .container,
+.desktop-list-subitems > .row,
+.desktop-list-subitems > div {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: flex-start !important;
+  gap: 1.4rem 2.4rem !important;
+}
+
+.desktop-list-subitems li,
+.desktop-list-subitems .col,
+.desktop-list-subitems [class*="col-"] {
+  min-width: 170px !important;
+}
+
+/* Links generales dentro del dropdown */
+.desktop-list-subitems a,
+.desktop-list-subitems .nav-list-link {
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  color: #444444 !important;
+  padding: 0.4rem 0.2rem !important;
+  display: block !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease, opacity 0.2s ease !important;
+  line-height: 1.45 !important;
+  white-space: normal !important;
+}
+
+.desktop-list-subitems a:hover,
+.desktop-list-subitems .nav-list-link:hover {
+  color: #111111 !important;
+  background-color: transparent !important;
+  text-decoration: none !important;
+}
+
+/* Encabezados de categoria (links principales / padres) */
+.desktop-list-subitems .nav-category-name,
+.desktop-list-subitems > li > a,
+.desktop-list-subitems > li > .nav-list-link,
+.desktop-list-subitems > li > span,
+.desktop-list-subitems > li > strong,
+.desktop-list-subitems > ul > li > a,
+.desktop-list-subitems > ul > li > .nav-list-link,
+.desktop-list-subitems > ul > li > span,
+.desktop-list-subitems > ul > li > strong,
+.desktop-list-subitems > div > ul > li > a,
+.desktop-list-subitems > div > ul > li > .nav-list-link,
+.desktop-list-subitems > div > ul > li > span,
+.desktop-list-subitems > div > ul > li > strong,
+.desktop-list-subitems .item-with-subitems > a,
+.desktop-list-subitems .item-with-subitems > .nav-list-link,
+.desktop-list-subitems .item-with-subitems > span,
+.desktop-list-subitems .item-with-subitems > strong,
+.desktop-list-subitems > ul > li > :first-child:not(ul),
+.desktop-list-subitems > div > ul > li > :first-child:not(ul),
+.desktop-list-subitems .item-subitems-head {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.13em !important;
+  text-transform: uppercase !important;
+  color: #111111 !important;
+  padding-bottom: 0.55rem !important;
+  margin-bottom: 0.45rem !important;
+  border-bottom: 1px solid #ebebeb !important;
+  display: block !important;
+  opacity: 1 !important;
+}
+
+.desktop-list-subitems > ul > li > :first-child:not(ul),
+.desktop-list-subitems > div > ul > li > :first-child:not(ul),
+.desktop-list-subitems .item-with-subitems > :first-child:not(ul) {
+  color: #111111 !important;
+  font-weight: 600 !important;
+}
+
+/* Sub-items debajo de cada categoria */
+.desktop-list-subitems ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.desktop-list-subitems ul ul {
+  margin-top: 0.3rem !important;
+  margin-bottom: 0 !important;
+}
+
+.desktop-list-subitems > ul,
+.desktop-list-subitems > div > ul,
+.desktop-list-subitems > .container > ul,
+.desktop-list-subitems > .row > ul,
+.desktop-list-subitems > .container > div,
+.desktop-list-subitems > .row > div {
+  flex: 0 1 190px !important;
+  max-width: 220px !important;
+}
+
+.desktop-list-subitems > ul > li:has(> ul),
+.desktop-list-subitems > div > ul > li:has(> ul),
+.desktop-list-subitems > .container > ul > li:has(> ul),
+.desktop-list-subitems > .row > ul > li:has(> ul),
+.desktop-list-subitems .item-with-subitems {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.13em !important;
+  text-transform: uppercase !important;
+  color: #111111 !important;
+  line-height: 1.4 !important;
+}
+
+.desktop-list-subitems > ul > li:has(> ul) > ul,
+.desktop-list-subitems > div > ul > li:has(> ul) > ul,
+.desktop-list-subitems > .container > ul > li:has(> ul) > ul,
+.desktop-list-subitems > .row > ul > li:has(> ul) > ul,
+.desktop-list-subitems .item-with-subitems > ul {
+  margin-top: 0.45rem !important;
+}
+
+.desktop-list-subitems > ul > li:has(> ul) > ul a,
+.desktop-list-subitems > ul > li:has(> ul) > ul .nav-list-link,
+.desktop-list-subitems > div > ul > li:has(> ul) > ul a,
+.desktop-list-subitems > div > ul > li:has(> ul) > ul .nav-list-link,
+.desktop-list-subitems > .container > ul > li:has(> ul) > ul a,
+.desktop-list-subitems > .container > ul > li:has(> ul) > ul .nav-list-link,
+.desktop-list-subitems > .row > ul > li:has(> ul) > ul a,
+.desktop-list-subitems > .row > ul > li:has(> ul) > ul .nav-list-link,
+.desktop-list-subitems .item-with-subitems > ul a,
+.desktop-list-subitems .item-with-subitems > ul .nav-list-link {
+  font-size: 10.5px !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.1em !important;
+  color: #666666 !important;
+}
+
+.desktop-list-subitems ul > li {
+  margin-bottom: 0.95rem !important;
+}
+
+.desktop-list-subitems ul ul > li {
+  margin-bottom: 0.15rem !important;
+}
+
+.desktop-list-subitems ul ul li a,
+.desktop-list-subitems ul ul .nav-list-link {
+  font-weight: 300 !important;
+  color: #666666 !important;
+  font-size: 10.5px !important;
+  padding: 0.22rem 0.2rem !important;
+}
+
+.desktop-list-subitems ul ul li a:hover,
+.desktop-list-subitems ul ul .nav-list-link:hover {
+  color: #111111 !important;
+}
+
+/* Si el dropdown se muestra como columnas (multiples listas lado a lado) */
+.desktop-list-subitems .row,
+.desktop-list-subitems .d-flex {
+  align-items: flex-start !important;
+}
+
+.desktop-list-subitems .col,
+.desktop-list-subitems [class*="col-"] {
+  flex: 0 1 190px !important;
+  max-width: 220px !important;
+  padding-right: 0 !important;
+}
+
+/* Quitar fondos y bordes extra heredados del theme */
+.nav-desktop .nav-item:hover > .desktop-list-subitems,
+.js-nav-desktop .nav-item:hover > .desktop-list-subitems,
+.desktop-nav .nav-item:hover > .desktop-list-subitems {
+  border-radius: 0 !important;
+}
+
 /* Separacion visual entre header y contenido */
 .head-main + *,
 .js-head-main + * {

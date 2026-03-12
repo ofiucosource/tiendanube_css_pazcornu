@@ -7,6 +7,7 @@ Archivos incluidos:
 - 01-tiendanube-morelia-contexto.md: marco tecnico general de Tienda Nube, Morelia y el theme Base como referencia.
 - 02-mapa-selectores-theme-actual.md: traduccion de los selectores usados en theme.css a componentes y hooks documentados.
 - 03-direccion-visual-zara.md: lineamientos esteticos para futuras iteraciones, inspirados en Zara pero aterrizados al proyecto actual.
+- 04-guidelines-diseno-editorial.md: sistema de criterios visuales y de interaccion para mantener consistencia en navbar, dropdowns, producto y grilla.
 
 Uso recomendado:
 
