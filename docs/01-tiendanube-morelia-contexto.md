@@ -61,6 +61,43 @@ Impacto para nuestro caso:
 - El CSS actual esta trabajando sobre componentes que normalmente nacen en `snipplets/product`, `snipplets/grid`, `snipplets/shipping`, `snipplets/payments` y `snipplets/page-header`.
 - Eso hace posible mapear la mayoria de los selectores a piezas documentadas.
 
+## Limite real del conocimiento HTML en Morelia
+
+Hay que dejar esto explicito para no sobredimensionar lo que la documentacion oficial publica.
+
+Verificado:
+
+- Tiendanube publica la arquitectura de themes, templates, snipplets, objetos Twig, puntos de anclaje `data-store` y muchos fragmentos reales de HTML del Theme Base.
+- Tiendanube confirma que Morelia es una plantilla nativa con stack tecnico compartido con otras plantillas modernas de Bootstrap 4.
+- Tiendanube documenta que ciertos componentes pueden ser opcionales, privados o depender de configuraciones del administrador.
+
+No verificado de forma exhaustiva:
+
+- Tiendanube no publica una lista oficial cerrada de "todas las etiquetas HTML" renderizadas por Morelia en todos los estados posibles.
+- Tampoco garantiza que todas las tiendas con Morelia mantengan intacto el markup si tuvieron personalizaciones por FTP o cambios historicos.
+
+Consecuencia operativa:
+
+- El objetivo realista no es inventariar cada nodo posible del DOM final.
+- El objetivo correcto es documentar la taxonomia oficial de templates, componentes, etiquetas recurrentes y anchors estables para CSS durable.
+- Esa taxonomia queda ampliada en `05-taxonomia-html-tiendanube-morelia.md`.
+
+## Data-store y componentes privados: impacto directo en CSS
+
+La plataforma documenta dos capas que afectan el DOM real:
+
+### 1. Puntos de anclaje para aplicaciones
+
+- `data-store` es el contrato oficial mas estable para anclarse al markup.
+- Aplica a home, listados, detalle de producto, carrito, cuenta, footer, header y contacto.
+- En Morelia varios bloques de home tienen disponibilidad confirmada oficialmente, por ejemplo categorias destacadas, mensaje de bienvenida, productos en promocion, producto principal, brands, testimonials y newsletter.
+
+### 2. Componentes privados
+
+- Tiendanube ofrece componentes cuyo HTML interno no se edita libremente por FTP.
+- Para CSS esto implica que el punto estable no siempre es la estructura interna, sino el contenedor, sus parametros y los `data-store` o clases de integracion documentadas.
+- Casos especialmente relevantes: cuotas, medios de pago, filtros, sort-by, search, imagenes, labels y mensaje de descuento no combinable.
+
 ## Componentes oficiales relevantes para el CSS actual
 
 ### Product detail
