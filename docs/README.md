@@ -9,6 +9,8 @@ Archivos incluidos:
 - 03-direccion-visual-zara.md: lineamientos esteticos para futuras iteraciones, inspirados en Zara pero aterrizados al proyecto actual.
 - 04-guidelines-diseno-editorial.md: sistema de criterios visuales y de interaccion para mantener consistencia en navbar, dropdowns, producto y grilla.
 - 05-taxonomia-html-tiendanube-morelia.md: mapa de etiquetas HTML, bloques por template y anchors oficiales para CSS preciso en Tiendanube, con foco operativo en Morelia.
+- 06-quickshop-modal-contexto.md: snapshot operativo del DOM de `#quickshop-modal`, con etiquetas, ids, clases, anchors CSS y hooks sensibles.
+- 07-single-product-contexto.md: snapshot operativo del DOM de `#single-product`, con galeria, precio, formulario, cuotas, descripcion y modal de pagos.
 
 Nota importante:
 
@@ -18,9 +20,11 @@ Uso recomendado:
 
 1. Leer primero 01-tiendanube-morelia-contexto.md.
 2. Leer 05-taxonomia-html-tiendanube-morelia.md si el cambio depende de entender bloques, templates o etiquetas del DOM.
-3. Validar cualquier cambio contra 02-mapa-selectores-theme-actual.md.
-4. Usar 04-guidelines-diseno-editorial.md para mantener coherencia visual y evitar abrir caminos no validados.
-5. Usar 03-direccion-visual-zara.md para decidir tono visual y prioridades de refinamiento.
+3. Leer 06-quickshop-modal-contexto.md si el cambio afecta quickshop, variantes, cantidad, CTA o stock notification dentro del modal.
+4. Leer 07-single-product-contexto.md si el cambio afecta product detail, galeria, precio, variantes, CTA, descripcion o modal de medios de pago.
+5. Validar cualquier cambio contra 02-mapa-selectores-theme-actual.md.
+6. Usar 04-guidelines-diseno-editorial.md para mantener coherencia visual y evitar abrir caminos no validados.
+7. Usar 03-direccion-visual-zara.md para decidir tono visual y prioridades de refinamiento.
 
 Conclusion operativa:
 
