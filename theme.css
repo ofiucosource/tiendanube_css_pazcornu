@@ -619,6 +619,11 @@
    ALINEADO CON PRODUCT DETAIL
    ======================================== */
 
+/* Mantener aca: en el preview del admin este selector deja de aplicar si se mueve al final del archivo. */
+svg.js-open-quickshop-icon.icon-inline.ml-1 {
+  display: none !important;
+}
+
 #quickshop-modal .quickshop-image-container,
 #quickshop-modal .js-item-variants,
 #quickshop-modal #quickshop-form {
