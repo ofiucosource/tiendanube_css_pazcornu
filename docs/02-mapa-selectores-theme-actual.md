@@ -10,6 +10,25 @@ Traducir los selectores usados hoy en `theme.css` a su significado funcional y a
 - Media: aparece alineado con patrones oficiales, pero puede variar entre themes o customizaciones.
 - Baja: parece mas dependiente del marcado puntual del theme o de una capa visual no documentada.
 
+## Navbar / Header
+
+| Selector actual | Que parece representar | Respaldo documental | Estabilidad | Observacion |
+| --- | --- | --- | --- | --- |
+| `.head-info`, `.js-head-info`, `.js-informative-banner` | barra informativa superior | layout.tpl / header snipplets | Media | tipografia y espaciado seguros |
+| `.head-main`, `.js-head-main` | header principal | layout.tpl / header snipplets | Media | borde y shadow seguros |
+| `.logo-img-container` | wrapper del logo | header snipplets | Media | padding seguro |
+| `.logo-img` | imagen del logo | header snipplets | Media | max-height y transicion seguros |
+| `.utilities-container`, `.js-utilities-container` | iconos de buscar, usuario, carrito | header snipplets | Media | sensible a JS en su interior |
+| `.js-cart-widget .js-cart-count`, `.head-cart .js-cart-count` | badge numerico del carrito | header snipplets | Media | no ocultar; tipografia segura |
+| `.nav-desktop`, `.js-nav-desktop`, `.desktop-nav` | navegacion principal desktop | header snipplets | Media | tipografia y padding seguros |
+| `.desktop-list-subitems` | dropdown de submenu desktop | theme Morelia | Media | componente visual del theme |
+| `.item-with-subitems` | categoria padre con hijos en dropdown | theme Morelia | Baja | propio del theme |
+| `.item-subitems-head` | encabezado de subcategoria en dropdown | theme Morelia | Baja | propio del theme |
+| `.nav-category-name` | nombre de categoria en dropdown | theme Morelia | Baja | propio del theme |
+| `.nav-list-link` | link general dentro del menu | theme Morelia | Media | patron visual del theme |
+| `.js-search-input` | input del buscador | header snipplets | Media | tipografia y borde seguros |
+| `.js-mobile-nav`, `.mobile-nav`, `.js-nav-mobile` | navegacion mobile (hamburger) | header snipplets | Media | tipografia segura |
+
 ## Detalle de producto
 
 | Selector actual | Que parece representar | Respaldo documental | Estabilidad | Observacion |
@@ -47,6 +66,37 @@ Traducir los selectores usados hoy en `theme.css` a su significado funcional y a
 | `.js-accordion-toggle` | toggle de acordeon | patron de UI del theme | Media | validar hover/focus |
 | `.js-accordion-toggle .subtitle` | subtitulo del acordeon | patron del theme | Media | tipografia segura |
 | `.product-description` | descripcion del producto | `product-form.tpl` | Alta | excelente anchor para tono editorial |
+| `.font-small`, `.font-smallest` | clases utilitarias de tamaño de texto | Bootstrap / theme | Media | usadas en textos secundarios de precio y cuotas |
+| `.opacity-60`, `.opacity-80` | clases utilitarias de opacidad | Bootstrap / theme | Media | usadas para atenuar mensajes secundarios |
+| `.btn-variant:not(.btn-variant-color) .btn-variant-content` | contenido textual dentro de variante pill | theme Morelia | Media | hereda uppercase y color del padre |
+| `.btn-variant-color .btn-variant-content` | swatch de color dentro de variante color | theme Morelia | Media | tamaño y display controlados |
+
+## Quickshop modal
+
+| Selector actual | Que parece representar | Respaldo documental | Estabilidad | Observacion |
+| --- | --- | --- | --- | --- |
+| `#quickshop-modal` | scope raiz del modal quickshop | theme Morelia | Alta | mejor anchor para overrides |
+| `#quickshop-modal .quickshop-image-container` | wrapper de la imagen | theme Morelia | Media | fondo y overflow seguros |
+| `#quickshop-modal .js-item-variants` | columna de info (nombre, precio, variantes, CTA) | theme Morelia | Media | scope principal de la mitad derecha |
+| `#quickshop-modal #quickshop-form` | formulario de compra | theme Morelia | Media | scope directo del form |
+| `#quickshop-modal .js-item-name` | nombre del producto | `grid/item.tpl` | Alta | tipografia segura |
+| `#quickshop-modal .js-price-display` | precio reactivo | docs de pagos/cuotas | Alta | no ocultar |
+| `#quickshop-modal .js-compare-price-display` | precio comparativo tachado | docs de pagos/cuotas | Media | visible solo con promo |
+| `#quickshop-modal .form-label`, `.js-insta-variation-label` | label de variante | `product-variants.tpl` | Media | tipografia segura |
+| `#quickshop-modal .js-product-variants-group` | grupo de cada variante | `product-variants.tpl` | Alta | buen anchor estructural |
+| `#quickshop-modal .btn-variant:not(.btn-variant-color)` | variante tipo pill/texto | theme Morelia | Media | propio del theme |
+| `#quickshop-modal .btn-variant-color` | variante tipo color swatch | theme Morelia | Media | propio del theme |
+| `#quickshop-modal .form-quantity-product` | wrapper del stepper cantidad | theme Morelia | Media | border y layout seguros |
+| `#quickshop-modal .js-quantity-input` | input de cantidad | `product-quantity.tpl` | Alta | sensible a usabilidad |
+| `#quickshop-modal .js-quantity-down`, `.js-quantity-up` | controles de cantidad | `product-quantity.tpl` | Alta | no desactivar |
+| `#quickshop-modal .js-prod-submit-form`, `.btn-add-to-cart` | boton de compra real | `product-form.tpl` | Alta | CTA principal |
+| `#quickshop-modal .js-addtocart-placeholder` | placeholder de estados de compra | `product-form.tpl` | Alta | no eliminar |
+| `#quickshop-modal .modal-close` | boton cerrar del modal | theme Morelia | Media | no ocultar |
+| `#quickshop-modal .js-product-stock` | mensaje de stock | labels/product flows | Media | revisar junto a variantes |
+| `#quickshop-modal #stock-notification-container` | modulo aviso de stock | custom / Morelia | Media | ids dedicados, facil de controlar |
+| `svg.js-open-quickshop-icon.icon-inline` | icono de apertura quickshop en grid | theme Morelia | Baja | oculto intencionalmente en el CSS actual |
+
+Nota: la estructura detallada del DOM de quickshop esta documentada en `06-quickshop-modal-contexto.md`. En este bloque el respaldo es mixto: snapshot operativo del DOM real + patrones oficiales de product, price y quantity.
 
 ## Home / grilla de productos
 
@@ -68,6 +118,24 @@ Traducir los selectores usados hoy en `theme.css` a su significado funcional y a
 | `[data-store="product-item-buy-button"]` | boton compra de item | hook oficial storefront | Alta | excelente anchor |
 | `[data-store="product-item-buy-now"]` | compra inmediata | hook oficial storefront | Alta | puede no existir segun configuracion |
 | `.js-addtocart-placeholder-inline` | placeholder inline en cards | `grid/item.tpl` placeholder | Media | no aparece en tu CSS pero es vecino funcional |
+| `.product-item-image-container` | wrapper alternativo de imagen en card | `grid/item.tpl` | Media | usado junto a `.item-image-container` |
+| `[data-store^="product-item-image-"]` | imagen con hook oficial | `grid/item.tpl` | Alta | anchor estable para overflow y posicion |
+| `[data-store="product-item-labels"]` | wrapper de badges/labels en card | `grid/item.tpl` | Alta | posicion absoluta sobre la imagen |
+| `[data-store="product-item-label-shipping"]` | label de envio gratis en card | `grid/item.tpl` | Alta | tipografia y posicion seguras |
+| `.item-description .btn-primary`, `.btn-small`, `.btn-link` | variaciones de CTA en card | Bootstrap + theme | Media | cubiertos como fallback junto al CTA principal |
+
+### Home image-text module
+
+| Selector actual | Que parece representar | Respaldo documental | Estabilidad | Observacion |
+| --- | --- | --- | --- | --- |
+| `[data-store="home-image-text-module"]` | bloque imagen + texto en home | puntos de anclaje oficiales | Alta | anchor oficial de Morelia |
+| `.textbanner-paragraph` | parrafo descriptivo del modulo | theme Morelia | Media | tipografia y layout seguros |
+| `.textbanner-text` | contenedor del area de texto | theme Morelia | Media | height ajustado a auto |
+| `.js-textbanner-image-container`, `.textbanner-image` | wrapper de la imagen | theme Morelia | Media | overflow y fondo seguros |
+| `.js-textbanner-image` | imagen del modulo | theme Morelia | Media | object-fit y transicion seguros |
+| `.js-textbanner-text` | wrapper de texto con layout flex | theme Morelia | Media | padding y alineacion seguros |
+| `.js-banner-title`, `.textbanner-text h3` | titulo del modulo | theme Morelia | Media | tipografia segura |
+| `.placeholder-banner` | placeholder visual cuando no hay contenido | theme Morelia | Baja | oculto intencionalmente |
 
 ## Categorias / subcategorias / listados
 
@@ -132,6 +200,20 @@ Estabilidad:
 - Seguros para tipografia, border, hover y spacing.
 - Evitar cambiar display estructural o logica de visibilidad sin validar comportamiento del theme.
 
+## Mobile
+
+El CSS incluye un bloque `@media (max-width: 768px)` que ajusta tipografia, spacing y dimensiones para mobile. Afecta:
+
+- Navbar: barra informativa, logo y navegacion mobile.
+- Detalle de producto: titulo, variantes, precio y textos secundarios.
+- Quickshop: nombre, precio, variantes, cantidad y CTA.
+- Home image-text module: imagen, texto y titulo.
+- Grilla: nombres, precios, CTAs y spacing de cards.
+- Sidebar/filtros: titulos, links y labels.
+- Paginacion: dimensiones y tipografia.
+
+No cambia el orden visual ni la arquitectura de selectores; solo reduce tamaños y ajusta espaciados para pantallas angostas.
+
 ## Relacion directa con docs oficiales
 
 ### Bloques del CSS actual fuertemente respaldados
@@ -148,16 +230,28 @@ Estabilidad:
 - `.js-quantity-*`
 - `.product-description`
 - `.section-featured-home`
+- `[data-store="home-image-text-module"]`
 - `.js-products-grid`
 - `.products-grid`
 - `[data-store="category-products"]`
 - `[data-store="products-list"]`
+- `[data-store="search-results"]`
+- `[data-store="product-item-labels"]`
+- `[data-store="product-item-label-shipping"]`
+- `[data-store^="product-item-image-"]`
 - `.item-name`
 - `.item-price-container`
 - `[data-store="product-item-buy-button"]`
 
 ### Hooks validos pero mas sensibles
 
+- `.head-info`, `.js-head-info`, `.js-informative-banner`
+- `.head-main`, `.js-head-main`
+- `.utilities-container`, `.js-utilities-container`
+- `.nav-desktop`, `.js-nav-desktop`, `.desktop-nav`
+- `.desktop-list-subitems`
+- `.js-search-input`
+- `.js-mobile-nav`, `.mobile-nav`, `.js-nav-mobile`
 - `.btn-variant`
 - `.btn-variant-color`
 - `.js-shipping-add-product-label`

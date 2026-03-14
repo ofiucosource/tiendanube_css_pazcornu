@@ -5,7 +5,7 @@ Este directorio resume el contexto oficial necesario para trabajar el CSS person
 Archivos incluidos:
 
 - 01-tiendanube-morelia-contexto.md: marco tecnico general de Tienda Nube, Morelia y el theme Base como referencia.
-- 02-mapa-selectores-theme-actual.md: traduccion de los selectores usados en theme.css a componentes y hooks documentados.
+- 02-mapa-selectores-theme-actual.md: traduccion de los selectores usados en theme.css a componentes y hooks documentados. Incluye secciones de Navbar/Header, Detalle de producto, Quickshop, Home/grilla, Home image-text module, Categorias/listados, Mobile y relacion con docs oficiales.
 - 03-direccion-visual-zara.md: lineamientos esteticos para futuras iteraciones, inspirados en Zara pero aterrizados al proyecto actual.
 - 04-guidelines-diseno-editorial.md: sistema de criterios visuales y de interaccion para mantener consistencia en navbar, dropdowns, producto y grilla.
 - 05-taxonomia-html-tiendanube-morelia.md: mapa de etiquetas HTML, bloques por template y anchors oficiales para CSS preciso en Tiendanube, con foco operativo en Morelia.
@@ -14,7 +14,7 @@ Archivos incluidos:
 
 Nota importante:
 
-- Despues de la unificacion de listados, `02-mapa-selectores-theme-actual.md` tambien documenta scopes validados en preview para category, subcategory, collection, search, filtros y paginacion. Ese archivo debe ser la primera referencia antes de abrir nuevos selectores.
+- Despues de la unificacion de listados, `02-mapa-selectores-theme-actual.md` tambien documenta scopes validados en preview para category, subcategory, collection, search, filtros y paginacion. Ademas cubre navbar/header, quickshop y home image-text module.
 
 Uso recomendado:
 

@@ -17,8 +17,12 @@ Definir una base visual consistente para futuras iteraciones del CSS, tomando co
 
 - Base principal: blanco, negro y grises neutros.
 - Negro funcional: `#111111` para texto principal, CTAs y titulos.
-- Gris medio: `#444444` a `#666666` para texto secundario.
-- Gris suave estructural: `#e6e6e6` a `#ebebeb` para bordes y separadores.
+- Gris texto: `#333333` para descripcion de producto.
+- Gris medio: `#444444` a `#666666` para texto secundario y subitems de dropdown.
+- Gris placeholder: `#999999` para placeholders del buscador.
+- Gris borde funcional: `#c8c8c8` a `#d8d8d8` para bordes de inputs, variantes, paginacion y sort-by.
+- Gris suave estructural: `#e0e0e0` a `#ebebeb` para separadores, bordes de header y hover de CTA en grilla.
+- Fondos neutros: `#faf9f7` para imagen quickshop, `#f6f3ef` para imagen del textbanner.
 - Evitar colores acento salvo necesidad funcional muy puntual.
 
 ### Tipografia

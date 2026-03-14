@@ -107,7 +107,7 @@ Mantener un sistema extremadamente corto:
 - gris secundario: `#444444`
 - gris borde: `#c8c8c8`
 - fondo: `#ffffff`
-- hover suave: `#e6e6e6` o cercano
+- hover suave: `#e0e0e0` a `#e6e6e6` segun contexto (grid CTA vs separadores)
 
 Idea central:
 
