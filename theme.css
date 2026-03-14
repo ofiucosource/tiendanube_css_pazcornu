@@ -884,11 +884,24 @@ svg.js-open-quickshop-icon.icon-inline.ml-1 {
   background: transparent !important;
   color: #111111 !important;
   box-shadow: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
 }
 
 #quickshop-modal .js-item-variants .js-quantity-down svg,
 #quickshop-modal .js-item-variants .js-quantity-up svg {
   fill: currentColor !important;
+  width: 12px !important;
+  height: 12px !important;
+  display: block !important;
+  margin: 0 !important;
+}
+
+#quickshop-modal .js-item-variants .form-quantity-icon.icon-35px {
+  width: auto !important;
+  min-height: 0 !important;
 }
 
 #quickshop-modal .js-item-variants .js-prod-submit-form,
