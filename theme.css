@@ -539,13 +539,14 @@
 #single-product[data-store="product-detail"] [data-store="product-buy-button"],
 #single-product[data-store="product-detail"] [data-component="product.add-to-cart"],
 #single-product[data-store="product-detail"] .js-addtocart-placeholder {
-  min-height: 44px !important;
-  font-size: 10px !important;
+  min-height: 40px !important;
+  padding: 0.8rem 1rem !important;
+  font-size: 9px !important;
   font-weight: 300 !important;
-  letter-spacing: 0.13em !important;
+  letter-spacing: 0.11em !important;
   text-transform: uppercase !important;
   background-color: transparent !important;
-  border: 0.9px solid #111111 !important;
+  border: 0.8px solid #111111 !important;
   border-radius: 0 !important;
   color: #111111 !important;
   transition: background-color 0.25s ease, color 0.25s ease !important;
@@ -611,6 +612,315 @@
   color: #333333 !important;
   font-style: italic !important;
   letter-spacing: 0.01em !important;
+}
+
+/* ========================================
+   QUICKSHOP / AGREGAR AL CARRITO
+   ALINEADO CON PRODUCT DETAIL
+   ======================================== */
+
+.quickshop-image-container,
+.js-item-variants,
+#quickshop-form {
+  color: #111111 !important;
+}
+
+.js-item-variants .js-item-name,
+.js-item-variants [data-store^="product-item-name-"] {
+  color: #111111 !important;
+  font-size: 20px !important;
+  line-height: 1.1 !important;
+  letter-spacing: 0.05em !important;
+  font-weight: 400 !important;
+  margin-bottom: 0 !important;
+  text-transform: none !important;
+}
+
+.js-item-variants [data-store^="product-item-price-"] {
+  margin-bottom: 1rem !important;
+}
+
+.js-item-variants .js-price-display,
+.js-item-variants .price,
+.js-item-variants [data-store^="product-item-price-"] > span:first-child {
+  font-size: 15px !important;
+  line-height: 1.3 !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.02em !important;
+  color: #111111 !important;
+}
+
+.js-item-variants .js-compare-price-display,
+.js-item-variants .price-compare {
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.02em !important;
+  color: #7a7a7a !important;
+  text-decoration-thickness: 1px !important;
+  margin-left: 0.35rem !important;
+}
+
+.js-item-variants .form-label,
+.js-item-variants .js-insta-variation-label {
+  font-size: 10px !important;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.08em !important;
+  color: #111111 !important;
+  text-transform: none !important;
+}
+
+.js-item-variants .js-product-variants-group {
+  margin-bottom: 1.15rem !important;
+}
+
+.js-item-variants .btn-variant:not(.btn-variant-color) {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 84px !important;
+  padding: 0.7rem 1rem !important;
+  margin: 0 0.45rem 0.45rem 0 !important;
+  border: 1px solid #c8c8c8 !important;
+  border-radius: 0 !important;
+  background: #ffffff !important;
+  color: #111111 !important;
+  font-size: 10px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.06em !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease !important;
+}
+
+.js-item-variants .btn-variant:not(.btn-variant-color) .btn-variant-content {
+  color: inherit !important;
+  text-transform: uppercase !important;
+}
+
+.js-item-variants .btn-variant:not(.btn-variant-color):hover,
+.js-item-variants .btn-variant:not(.btn-variant-color):focus {
+  border-color: #111111 !important;
+  background: #111111 !important;
+  color: #ffffff !important;
+}
+
+.js-item-variants .btn-variant:not(.btn-variant-color).selected {
+  border-color: #111111 !important;
+  background: #111111 !important;
+  color: #ffffff !important;
+}
+
+.js-item-variants .btn-variant:not(.btn-variant-color):hover .btn-variant-content,
+.js-item-variants .btn-variant:not(.btn-variant-color):focus .btn-variant-content,
+.js-item-variants .btn-variant:not(.btn-variant-color).selected .btn-variant-content {
+  color: #ffffff !important;
+}
+
+.js-item-variants .btn-variant-color {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 30px !important;
+  height: 30px !important;
+  padding: 4px !important;
+  margin: 0 0.55rem 0.35rem 0 !important;
+  border: 1px solid #d7d7d7 !important;
+  border-radius: 0 !important;
+  background: #ffffff !important;
+  box-shadow: none !important;
+  line-height: 0 !important;
+}
+
+.js-item-variants .btn-variant-color .btn-variant-content {
+  display: block !important;
+  flex: 0 0 20px !important;
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  min-height: 20px !important;
+  margin: 0 auto !important;
+  aspect-ratio: 1 / 1 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+
+.js-item-variants .btn-variant-color.selected {
+  border-color: #111111 !important;
+  background: #f8f8f8 !important;
+}
+
+.js-item-variants .modal-close,
+.js-item-variants .modal-close svg,
+.js-item-variants .modal-close .icon-inline {
+  color: #111111 !important;
+  fill: currentColor !important;
+  opacity: 0.8 !important;
+  transition: opacity 0.2s ease !important;
+}
+
+.js-item-variants .modal-close:hover,
+.js-item-variants .modal-close:hover svg,
+.js-item-variants .modal-close:hover .icon-inline {
+  opacity: 1 !important;
+}
+
+.js-item-variants .form-quantity-product,
+.js-item-variants .js-quantity-input,
+.js-item-variants .js-quantity-down,
+.js-item-variants .js-quantity-up {
+  font-size: 12px !important;
+}
+
+.js-item-variants .js-product-quantity-container {
+  flex: 0 0 116px !important;
+  max-width: 116px !important;
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+.js-item-variants .form-quantity-product {
+  min-height: 44px !important;
+  width: 100% !important;
+  border: 1px solid #c8c8c8 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: #ffffff !important;
+  flex-wrap: nowrap !important;
+}
+
+.js-item-variants .js-product-quantity-container .form-group,
+.js-item-variants .js-product-quantity-container .js-quantity {
+  width: 100% !important;
+  margin-bottom: 0 !important;
+}
+
+.js-item-variants .form-quantity-product .form-control-container {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+}
+
+.js-item-variants .js-quantity-input {
+  height: 42px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #111111 !important;
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.03em !important;
+  line-height: 42px !important;
+  padding: 0 !important;
+  font-variant-numeric: tabular-nums !important;
+  font-feature-settings: "tnum" 1 !important;
+  -moz-appearance: textfield !important;
+  appearance: textfield !important;
+  text-align: center !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+.js-item-variants .js-quantity-input::-webkit-outer-spin-button,
+.js-item-variants .js-quantity-input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+
+.js-item-variants .js-quantity-down,
+.js-item-variants .js-quantity-up {
+  flex: 0 0 28px !important;
+  min-width: 28px !important;
+  height: 42px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #111111 !important;
+  box-shadow: none !important;
+}
+
+.js-item-variants .js-quantity-down svg,
+.js-item-variants .js-quantity-up svg {
+  fill: currentColor !important;
+}
+
+.js-item-variants .js-prod-submit-form,
+.js-item-variants .btn-add-to-cart,
+.js-item-variants .js-addtocart-placeholder {
+  min-height: 40px !important;
+  padding: 0.8rem 1rem !important;
+  border: 0.8px solid #111111 !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  color: #111111 !important;
+  font-size: 9px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.11em !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+  box-shadow: none !important;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease !important;
+}
+
+.js-item-variants .js-prod-submit-form:hover,
+.js-item-variants .js-prod-submit-form:focus,
+.js-item-variants .btn-add-to-cart:hover,
+.js-item-variants .btn-add-to-cart:focus,
+.js-item-variants .js-addtocart-placeholder:hover,
+.js-item-variants .js-addtocart-placeholder:focus {
+  background-color: #111111 !important;
+  border-color: #111111 !important;
+  color: #ffffff !important;
+}
+
+.js-item-variants .js-addtocart-placeholder *,
+.js-item-variants .js-prod-submit-form *,
+.js-item-variants .btn-add-to-cart * {
+  color: inherit !important;
+  text-transform: uppercase !important;
+}
+
+.js-item-variants .js-addtocart-placeholder .js-addtocart-adding-text,
+.js-item-variants .js-addtocart-placeholder .js-addtocart-success,
+.js-item-variants .js-addtocart-placeholder .js-addtocart-text {
+  letter-spacing: 0.13em !important;
+}
+
+.js-item-variants .js-addtocart-placeholder .icon-inline,
+.js-item-variants .js-prod-submit-form .icon-inline,
+.js-item-variants .btn-add-to-cart .icon-inline {
+  fill: currentColor !important;
+}
+
+.js-item-variants .buy-button-container {
+  display: flex !important;
+  align-items: stretch !important;
+  min-height: 40px !important;
+}
+
+.js-item-variants .buy-button-container > * {
+  width: 100% !important;
+}
+
+.js-item-variants .js-buy-button-container {
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+.js-item-variants .js-product-stock,
+.js-item-variants .js-added-to-cart-product-message,
+.js-item-variants .js-shipping-minimum-label {
+  font-size: 11px !important;
+  line-height: 1.5 !important;
+  color: #444444 !important;
+  opacity: 0.7 !important;
+  font-style: italic !important;
 }
 
 /* ========================================
@@ -1771,6 +2081,69 @@
     min-width: 72px !important;
     padding: 0.6rem 0.8rem !important;
     font-size: 10px !important;
+  }
+
+  .js-item-variants {
+    padding-top: 1.1rem !important;
+  }
+
+  .js-item-variants .js-item-name,
+  .js-item-variants [data-store^="product-item-name-"] {
+    font-size: 17px !important;
+    letter-spacing: 0.04em !important;
+  }
+
+  .js-item-variants .js-price-display,
+  .js-item-variants .price,
+  .js-item-variants [data-store^="product-item-price-"] > span:first-child {
+    font-size: 14px !important;
+  }
+
+  .js-item-variants .form-label,
+  .js-item-variants .js-insta-variation-label {
+    font-size: 10px !important;
+    letter-spacing: 0.06em !important;
+  }
+
+  .js-item-variants .btn-variant:not(.btn-variant-color) {
+    min-width: 78px !important;
+    padding: 0.65rem 0.9rem !important;
+    font-size: 10px !important;
+  }
+
+  .js-item-variants .btn-variant-color {
+    width: 26px !important;
+    height: 26px !important;
+    padding: 3px !important;
+  }
+
+  .js-item-variants .btn-variant-color .btn-variant-content {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    min-height: 18px !important;
+  }
+
+  .js-item-variants .js-product-quantity-container,
+  .js-item-variants .js-buy-button-container {
+    margin-top: 0.5rem !important;
+  }
+
+  .js-item-variants .js-product-quantity-container {
+    flex: 0 0 108px !important;
+    max-width: 108px !important;
+  }
+
+  .js-item-variants .js-buy-button-container {
+    display: flex !important;
+    align-items: stretch !important;
+  }
+
+  .js-item-variants .form-quantity-product,
+  .js-item-variants .js-prod-submit-form,
+  .js-item-variants .btn-add-to-cart,
+  .js-item-variants .js-addtocart-placeholder {
+    min-height: 42px !important;
   }
 
   [data-store="home-image-text-module"] .js-textbanner-image {
