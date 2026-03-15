@@ -13,6 +13,7 @@ Archivos incluidos:
 - 07-single-product-contexto.md: snapshot operativo del DOM de `#single-product`, con galeria, precio, formulario, cuotas, descripcion y modal de pagos.
 - 08-complementary-products-contexto.md: snapshot operativo del DOM de `#complementary-products`, con slider, card reutilizado, labels, CTA de quickshop y anchors CSS para productos complementarios.
 - 09-related-products-contexto.md: snapshot operativo del DOM de `#related-products`, con slider Swiper, cards con imagen secundaria, estados promocionales y anchors CSS para productos relacionados.
+- 10-theme-vs-source-y-estrategia.md: comparacion entre `theme.css` y los SCSS descargados por FTP, con criterio operativo para decidir cuando editar el theme base y cuando dejar una capa custom, minimizando overrides fragiles.
 
 Nota importante:
 
@@ -29,6 +30,7 @@ Uso recomendado:
 7. Validar cualquier cambio contra 02-mapa-selectores-theme-actual.md.
 8. Usar 04-guidelines-diseno-editorial.md para mantener coherencia visual y evitar abrir caminos no validados.
 9. Usar 03-direccion-visual-zara.md para decidir tono visual y prioridades de refinamiento.
+10. Usar 10-theme-vs-source-y-estrategia.md para decidir en que capa conviene intervenir antes de escribir CSS nuevo.
 
 Conclusion operativa:
 
