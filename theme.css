@@ -243,10 +243,10 @@
   max-width: 220px !important;
 }
 
-.desktop-list-subitems > ul > li:has(> ul),
-.desktop-list-subitems > div > ul > li:has(> ul),
-.desktop-list-subitems > .container > ul > li:has(> ul),
-.desktop-list-subitems > .row > ul > li:has(> ul),
+.desktop-list-subitems > ul > li,
+.desktop-list-subitems > div > ul > li,
+.desktop-list-subitems > .container > ul > li,
+.desktop-list-subitems > .row > ul > li,
 .desktop-list-subitems .item-with-subitems {
   font-size: 11px !important;
   font-weight: 600 !important;
@@ -256,22 +256,22 @@
   line-height: 1.4 !important;
 }
 
-.desktop-list-subitems > ul > li:has(> ul) > ul,
-.desktop-list-subitems > div > ul > li:has(> ul) > ul,
-.desktop-list-subitems > .container > ul > li:has(> ul) > ul,
-.desktop-list-subitems > .row > ul > li:has(> ul) > ul,
+.desktop-list-subitems > ul > li > ul,
+.desktop-list-subitems > div > ul > li > ul,
+.desktop-list-subitems > .container > ul > li > ul,
+.desktop-list-subitems > .row > ul > li > ul,
 .desktop-list-subitems .item-with-subitems > ul {
   margin-top: 0.45rem !important;
 }
 
-.desktop-list-subitems > ul > li:has(> ul) > ul a,
-.desktop-list-subitems > ul > li:has(> ul) > ul .nav-list-link,
-.desktop-list-subitems > div > ul > li:has(> ul) > ul a,
-.desktop-list-subitems > div > ul > li:has(> ul) > ul .nav-list-link,
-.desktop-list-subitems > .container > ul > li:has(> ul) > ul a,
-.desktop-list-subitems > .container > ul > li:has(> ul) > ul .nav-list-link,
-.desktop-list-subitems > .row > ul > li:has(> ul) > ul a,
-.desktop-list-subitems > .row > ul > li:has(> ul) > ul .nav-list-link,
+.desktop-list-subitems > ul > li > ul a,
+.desktop-list-subitems > ul > li > ul .nav-list-link,
+.desktop-list-subitems > div > ul > li > ul a,
+.desktop-list-subitems > div > ul > li > ul .nav-list-link,
+.desktop-list-subitems > .container > ul > li > ul a,
+.desktop-list-subitems > .container > ul > li > ul .nav-list-link,
+.desktop-list-subitems > .row > ul > li > ul a,
+.desktop-list-subitems > .row > ul > li > ul .nav-list-link,
 .desktop-list-subitems .item-with-subitems > ul a,
 .desktop-list-subitems .item-with-subitems > ul .nav-list-link {
   font-size: 10.5px !important;
@@ -985,37 +985,105 @@ svg.js-open-quickshop-icon.icon-inline.ml-1 {
 }
 
 /* ========================================
-   HOME / GRILLA DE PRODUCTOS
-   NOMBRES ESTILIZADOS
+   RELATED PRODUCTS / COMPLEMENTARY PRODUCTS
+   MODULOS ASOCIADOS EN PDP
    ======================================== */
 
-.section-featured-home [data-store^="product-item-name-"],
-.section-featured-home .item-name,
-.section-featured-home .js-item-name,
-.js-products-grid [data-store^="product-item-name-"],
-.js-products-grid .item-name,
-.js-products-grid .js-item-name,
-.products-grid [data-store^="product-item-name-"],
-.products-grid .item-name,
-.products-grid .js-item-name,
-.product-table [data-store^="product-item-name-"],
-.product-table .item-name,
-.product-table .js-item-name,
-.js-product-table [data-store^="product-item-name-"],
-.js-product-table .item-name,
-.js-product-table .js-item-name,
-.js-category-products [data-store^="product-item-name-"],
-.js-category-products .item-name,
-.js-category-products .js-item-name,
-[data-store="category-products"] [data-store^="product-item-name-"],
-[data-store="category-products"] .item-name,
-[data-store="category-products"] .js-item-name,
-[data-store="products-list"] [data-store^="product-item-name-"],
-[data-store="products-list"] .item-name,
-[data-store="products-list"] .js-item-name,
-[data-store="search-results"] [data-store^="product-item-name-"],
-[data-store="search-results"] .item-name,
-[data-store="search-results"] .js-item-name {
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) {
+  color: #111111 !important;
+}
+
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) .products-section-title-container {
+  margin-bottom: 1.35rem !important;
+}
+
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) :is(.products-section-title, .products-section-title.h5) {
+  margin-bottom: 0 !important;
+  color: #111111 !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.08em !important;
+  line-height: 1.2 !important;
+  text-transform: uppercase !important;
+}
+
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) .products-section-container {
+  position: relative !important;
+}
+
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) :is(.products-section-prev-container, .products-section-next-container) {
+  color: #111111 !important;
+  opacity: 0.65 !important;
+  transition: opacity 0.2s ease !important;
+}
+
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) :is(.products-section-prev-container, .products-section-next-container):hover {
+  opacity: 1 !important;
+}
+
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) .products-section-slider-control {
+  fill: currentColor !important;
+}
+
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) :is(.item.item-product.grid-item, .js-product-container) {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) :is([data-store^="product-item-image-"], .product-item-image-container) {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) .item-image {
+  transition: transform 0.35s ease !important;
+}
+
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) .item-link:hover .item-image {
+  transform: scale(1.03) !important;
+}
+
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) [data-store="product-item-labels"] {
+  position: absolute !important;
+  left: 12px !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 12px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 0.3rem !important;
+  z-index: 1001 !important;
+}
+
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) :is([data-store="product-item-label-shipping"], [data-store="product-item-label-stock"], [data-store="product-item-offer-label"]) {
+  position: relative !important;
+  inset: auto !important;
+  margin: 0 !important;
+  padding: 0.35rem 0.55rem !important;
+  background-color: #ffffff !important;
+  color: #111111 !important;
+  font-size: 9px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.06em !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  white-space: nowrap !important;
+}
+
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) :is(.item-description, .item-description[data-store^="product-item-info-"]) {
+  flex: 1 1 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  padding-top: 0.85rem !important;
+  padding-bottom: 1.35rem !important;
+}
+
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) :is([data-store^="product-item-name-"], .item-name) {
   display: block !important;
   margin-bottom: 0.3rem !important;
   color: #111111 !important;
@@ -1027,15 +1095,122 @@ svg.js-open-quickshop-icon.icon-inline.ml-1 {
   opacity: 0.92 !important;
 }
 
-.section-featured-home .item-description,
-.js-products-grid .item-description,
-.products-grid .item-description,
-.product-table .item-description,
-.js-product-table .item-description,
-.js-category-products .item-description,
-[data-store="category-products"] .item-description,
-[data-store="products-list"] .item-description,
-[data-store="search-results"] .item-description {
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) .item-link:hover .item-name {
+  opacity: 1 !important;
+}
+
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) .item-price-container {
+  margin-top: 0.1rem !important;
+  margin-bottom: 0.5rem !important;
+  min-height: 2.5em !important;
+}
+
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) .item-price-container :is(.item-price, [data-store^="product-item-price-"]) {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  color: #111111 !important;
+  letter-spacing: 0.02em !important;
+}
+
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) :is(.price-compare, .js-compare-price-display) {
+  display: inline-block !important;
+  margin-right: 0.35rem !important;
+  color: #666666 !important;
+  font-size: 10px !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.03em !important;
+  line-height: 1.4 !important;
+  opacity: 0.75 !important;
+}
+
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) .item-actions {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+  margin-top: auto !important;
+  padding-top: 0.2rem !important;
+}
+
+/* CTA modulos: selectores #id (legacy) */
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"]) :is(.item-actions a, .js-item-quickshop.item-actions a, .btn.btn-primary.btn-small[data-component="product-list-item.add-to-cart"], [data-component="product-list-item.add-to-cart"]),
+/* CTA modulos: selectores section/class (Morelia actual) */
+:is(section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) :is(.item-actions .btn-link, .item-actions [data-component="product-list-item.add-to-cart"]) {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.3rem !important;
+  min-height: auto !important;
+  width: auto !important;
+  max-width: max-content !important;
+  padding: 0.4rem 0.65rem !important;
+  margin-top: 0.15rem !important;
+  background-color: transparent !important;
+  border: 0.9px solid #111111 !important;
+  border-radius: 0 !important;
+  color: #111111 !important;
+  font-size: 9px !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.13em !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  vertical-align: top !important;
+  transition: background-color 0.2s ease, color 0.2s ease !important;
+}
+
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"]) :is(.item-actions a, .btn.btn-primary.btn-small[data-component="product-list-item.add-to-cart"], [data-component="product-list-item.add-to-cart"]) *,
+:is(section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) :is(.item-actions .btn-link, .item-actions [data-component="product-list-item.add-to-cart"]) * {
+  color: inherit !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+}
+
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"]) :is(.item-actions a svg, .item-actions a i, .btn.btn-primary.btn-small[data-component="product-list-item.add-to-cart"] svg, .btn.btn-primary.btn-small[data-component="product-list-item.add-to-cart"] i, [data-component="product-list-item.add-to-cart"] svg, [data-component="product-list-item.add-to-cart"] i),
+:is(section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) .item-actions .js-open-quickshop-icon {
+  display: none !important;
+}
+
+:is(section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) .item-actions .js-open-quickshop-wording {
+  display: inline-block !important;
+  color: inherit !important;
+  font-size: inherit !important;
+  letter-spacing: inherit !important;
+  line-height: inherit !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+}
+
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"]) :is(.item-actions a, .btn.btn-primary.btn-small[data-component="product-list-item.add-to-cart"], [data-component="product-list-item.add-to-cart"]):hover,
+:is(section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) :is(.item-actions .btn-link, .item-actions [data-component="product-list-item.add-to-cart"]):hover {
+  background-color: #e0e0e0 !important;
+  border-color: #e0e0e0 !important;
+  color: #111111 !important;
+  text-decoration: none !important;
+}
+
+:is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"]) :is(.item-actions a, .btn.btn-primary.btn-small[data-component="product-list-item.add-to-cart"], [data-component="product-list-item.add-to-cart"]):hover *,
+:is(section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) :is(.item-actions .btn-link, .item-actions [data-component="product-list-item.add-to-cart"]):hover * {
+  color: #111111 !important;
+}
+
+/* ========================================
+   HOME / GRILLA DE PRODUCTOS
+   NOMBRES ESTILIZADOS
+   ======================================== */
+
+:is(.section-featured-home, .js-products-grid, .products-grid, .product-table, .js-product-table, .js-category-products, [data-store="category-products"], [data-store="products-list"], [data-store="search-results"]) :is([data-store^="product-item-name-"], .item-name, .js-item-name) {
+  display: block !important;
+  margin-bottom: 0.3rem !important;
+  color: #111111 !important;
+  text-transform: uppercase !important;
+  font-size: 13px !important;
+  line-height: 1.3 !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.07em !important;
+  opacity: 0.92 !important;
+}
+
+:is(.section-featured-home, .js-products-grid, .products-grid, .product-table, .js-product-table, .js-category-products, [data-store="category-products"], [data-store="products-list"], [data-store="search-results"]) .item-description {
   padding-top: 0.85rem !important;
   padding-bottom: 1.6rem !important;
 }
@@ -1121,75 +1296,25 @@ svg.js-open-quickshop-icon.icon-inline.ml-1 {
   display: none !important;
 }
 
-.section-featured-home .item-price-container,
-.js-products-grid .item-price-container,
-.products-grid .item-price-container,
-.product-table .item-price-container,
-.js-product-table .item-price-container,
-.js-category-products .item-price-container,
-[data-store="category-products"] .item-price-container,
-[data-store="products-list"] .item-price-container,
-[data-store="search-results"] .item-price-container {
+:is(.section-featured-home, .js-products-grid, .products-grid, .product-table, .js-product-table, .js-category-products, [data-store="category-products"], [data-store="products-list"], [data-store="search-results"]) .item-price-container {
   margin-top: 0.1rem !important;
   margin-bottom: 0.5rem !important;
 }
 
-.section-featured-home .item-price-container .item-price,
-.section-featured-home .item-price-container [data-store^="product-item-price-"],
-.js-products-grid .item-price-container .item-price,
-.js-products-grid .item-price-container [data-store^="product-item-price-"],
-.products-grid .item-price-container .item-price,
-.products-grid .item-price-container [data-store^="product-item-price-"],
-.product-table .item-price-container .item-price,
-.product-table .item-price-container [data-store^="product-item-price-"],
-.js-product-table .item-price-container .item-price,
-.js-product-table .item-price-container [data-store^="product-item-price-"],
-.js-category-products .item-price-container .item-price,
-.js-category-products .item-price-container [data-store^="product-item-price-"],
-[data-store="category-products"] .item-price-container .item-price,
-[data-store="category-products"] .item-price-container [data-store^="product-item-price-"],
-[data-store="products-list"] .item-price-container .item-price,
-[data-store="products-list"] .item-price-container [data-store^="product-item-price-"],
-[data-store="search-results"] .item-price-container .item-price,
-[data-store="search-results"] .item-price-container [data-store^="product-item-price-"] {
+:is(.section-featured-home, .js-products-grid, .products-grid, .product-table, .js-product-table, .js-category-products, [data-store="category-products"], [data-store="products-list"], [data-store="search-results"]) .item-price-container :is(.item-price, [data-store^="product-item-price-"]) {
   font-size: 13px !important;
   font-weight: 400 !important;
   color: #111111 !important;
   letter-spacing: 0.02em !important;
 }
 
-.section-featured-home .item-image-container,
-.section-featured-home .product-item-image-container,
-.js-products-grid .item-image-container,
-.js-products-grid .product-item-image-container,
-.products-grid .item-image-container,
-.products-grid .product-item-image-container,
-.product-table .item-image-container,
-.product-table .product-item-image-container,
-.js-product-table .item-image-container,
-.js-product-table .product-item-image-container,
-.js-category-products .item-image-container,
-.js-category-products .product-item-image-container,
-[data-store="category-products"] .item-image-container,
-[data-store="category-products"] .product-item-image-container,
-[data-store="products-list"] .item-image-container,
-[data-store="products-list"] .product-item-image-container,
-[data-store="search-results"] .item-image-container,
-[data-store="search-results"] .product-item-image-container,
+:is(.section-featured-home, .js-products-grid, .products-grid, .product-table, .js-product-table, .js-category-products, [data-store="category-products"], [data-store="products-list"], [data-store="search-results"]) :is(.item-image-container, .product-item-image-container),
 [data-store^="product-item-image-"] {
   position: relative !important;
   overflow: hidden !important;
 }
 
-.section-featured-home [data-store="product-item-labels"],
-.js-products-grid [data-store="product-item-labels"],
-.products-grid [data-store="product-item-labels"],
-.product-table [data-store="product-item-labels"],
-.js-product-table [data-store="product-item-labels"],
-.js-category-products [data-store="product-item-labels"],
-[data-store="category-products"] [data-store="product-item-labels"],
-[data-store="products-list"] [data-store="product-item-labels"],
-[data-store="search-results"] [data-store="product-item-labels"] {
+:is(.section-featured-home, .js-products-grid, .products-grid, .product-table, .js-product-table, .js-category-products, [data-store="category-products"], [data-store="products-list"], [data-store="search-results"]) [data-store="product-item-labels"] {
   position: absolute !important;
   left: 12px !important;
   right: auto !important;
@@ -1202,15 +1327,7 @@ svg.js-open-quickshop-icon.icon-inline.ml-1 {
   z-index: 1001 !important;
 }
 
-.section-featured-home [data-store="product-item-label-shipping"],
-.js-products-grid [data-store="product-item-label-shipping"],
-.products-grid [data-store="product-item-label-shipping"],
-.product-table [data-store="product-item-label-shipping"],
-.js-product-table [data-store="product-item-label-shipping"],
-.js-category-products [data-store="product-item-label-shipping"],
-[data-store="category-products"] [data-store="product-item-label-shipping"],
-[data-store="products-list"] [data-store="product-item-label-shipping"],
-[data-store="search-results"] [data-store="product-item-label-shipping"] {
+:is(.section-featured-home, .js-products-grid, .products-grid, .product-table, .js-product-table, .js-category-products, [data-store="category-products"], [data-store="products-list"], [data-store="search-results"]) [data-store="product-item-label-shipping"] {
   position: relative !important;
   inset: auto !important;
   margin: 0 !important;
@@ -1228,159 +1345,19 @@ svg.js-open-quickshop-icon.icon-inline.ml-1 {
   white-space: nowrap !important;
 }
 
-.section-featured-home .item-image,
-.js-products-grid .item-image,
-.products-grid .item-image,
-.product-table .item-image,
-.js-product-table .item-image,
-.js-category-products .item-image,
-[data-store="category-products"] .item-image,
-[data-store="products-list"] .item-image,
-[data-store="search-results"] .item-image {
+:is(.section-featured-home, .js-products-grid, .products-grid, .product-table, .js-product-table, .js-category-products, [data-store="category-products"], [data-store="products-list"], [data-store="search-results"]) .item-image {
   transition: transform 0.35s ease !important;
 }
 
-.section-featured-home .item-link:hover .item-image,
-.js-products-grid .item-link:hover .item-image,
-.products-grid .item-link:hover .item-image,
-.product-table .item-link:hover .item-image,
-.js-product-table .item-link:hover .item-image,
-.js-category-products .item-link:hover .item-image,
-[data-store="category-products"] .item-link:hover .item-image,
-[data-store="products-list"] .item-link:hover .item-image,
-[data-store="search-results"] .item-link:hover .item-image {
+:is(.section-featured-home, .js-products-grid, .products-grid, .product-table, .js-product-table, .js-category-products, [data-store="category-products"], [data-store="products-list"], [data-store="search-results"]) .item-link:hover .item-image {
   transform: scale(1.03) !important;
 }
 
-.section-featured-home .item-link:hover .item-name,
-.section-featured-home .item-link:hover .js-item-name,
-.js-products-grid .item-link:hover .item-name,
-.js-products-grid .item-link:hover .js-item-name,
-.products-grid .item-link:hover .item-name,
-.products-grid .item-link:hover .js-item-name,
-.product-table .item-link:hover .item-name,
-.product-table .item-link:hover .js-item-name,
-.js-product-table .item-link:hover .item-name,
-.js-product-table .item-link:hover .js-item-name,
-.js-category-products .item-link:hover .item-name,
-.js-category-products .item-link:hover .js-item-name,
-[data-store="category-products"] .item-link:hover .item-name,
-[data-store="category-products"] .item-link:hover .js-item-name,
-[data-store="products-list"] .item-link:hover .item-name,
-[data-store="products-list"] .item-link:hover .js-item-name,
-[data-store="search-results"] .item-link:hover .item-name,
-[data-store="search-results"] .item-link:hover .js-item-name {
+:is(.section-featured-home, .js-products-grid, .products-grid, .product-table, .js-product-table, .js-category-products, [data-store="category-products"], [data-store="products-list"], [data-store="search-results"]) .item-link:hover :is(.item-name, .js-item-name) {
   opacity: 1 !important;
 }
 
-.section-featured-home .item-actions a,
-.section-featured-home .item-actions .btn,
-.section-featured-home .item-buy,
-.section-featured-home .item-buy a,
-.section-featured-home .item-description .btn,
-.section-featured-home .item-description .btn-primary,
-.section-featured-home .item-description .btn-small,
-.section-featured-home .item-description .btn-link,
-.section-featured-home .item-description [data-store="product-item-buy-button"],
-.section-featured-home .item-description [data-store="product-item-buy-now"],
-.section-featured-home [data-store="product-item-buy-button"],
-.section-featured-home [data-store="product-item-buy-now"],
-.js-products-grid .item-actions a,
-.js-products-grid .item-actions .btn,
-.js-products-grid .item-buy,
-.js-products-grid .item-buy a,
-.js-products-grid .item-description .btn,
-.js-products-grid .item-description .btn-primary,
-.js-products-grid .item-description .btn-small,
-.js-products-grid .item-description .btn-link,
-.js-products-grid .item-description [data-store="product-item-buy-button"],
-.js-products-grid .item-description [data-store="product-item-buy-now"],
-.js-products-grid [data-store="product-item-buy-button"],
-.js-products-grid [data-store="product-item-buy-now"],
-.products-grid .item-actions a,
-.products-grid .item-actions .btn,
-.products-grid .item-buy,
-.products-grid .item-buy a,
-.products-grid .item-description .btn,
-.products-grid .item-description .btn-primary,
-.products-grid .item-description .btn-small,
-.products-grid .item-description .btn-link,
-.products-grid .item-description [data-store="product-item-buy-button"],
-.products-grid .item-description [data-store="product-item-buy-now"],
-.products-grid [data-store="product-item-buy-button"],
-.products-grid [data-store="product-item-buy-now"],
-.product-table .item-actions a,
-.product-table .item-actions .btn,
-.product-table .item-buy,
-.product-table .item-buy a,
-.product-table .item-description .btn,
-.product-table .item-description .btn-primary,
-.product-table .item-description .btn-small,
-.product-table .item-description .btn-link,
-.product-table .item-description [data-store="product-item-buy-button"],
-.product-table .item-description [data-store="product-item-buy-now"],
-.product-table [data-store="product-item-buy-button"],
-.product-table [data-store="product-item-buy-now"],
-.js-product-table .item-actions a,
-.js-product-table .item-actions .btn,
-.js-product-table .item-buy,
-.js-product-table .item-buy a,
-.js-product-table .item-description .btn,
-.js-product-table .item-description .btn-primary,
-.js-product-table .item-description .btn-small,
-.js-product-table .item-description .btn-link,
-.js-product-table .item-description [data-store="product-item-buy-button"],
-.js-product-table .item-description [data-store="product-item-buy-now"],
-.js-product-table [data-store="product-item-buy-button"],
-.js-product-table [data-store="product-item-buy-now"],
-.js-category-products .item-actions a,
-.js-category-products .item-actions .btn,
-.js-category-products .item-buy,
-.js-category-products .item-buy a,
-.js-category-products .item-description .btn,
-.js-category-products .item-description .btn-primary,
-.js-category-products .item-description .btn-small,
-.js-category-products .item-description .btn-link,
-.js-category-products .item-description [data-store="product-item-buy-button"],
-.js-category-products .item-description [data-store="product-item-buy-now"],
-.js-category-products [data-store="product-item-buy-button"],
-.js-category-products [data-store="product-item-buy-now"],
-[data-store="category-products"] .item-actions a,
-[data-store="category-products"] .item-actions .btn,
-[data-store="category-products"] .item-buy,
-[data-store="category-products"] .item-buy a,
-[data-store="category-products"] .item-description .btn,
-[data-store="category-products"] .item-description .btn-primary,
-[data-store="category-products"] .item-description .btn-small,
-[data-store="category-products"] .item-description .btn-link,
-[data-store="category-products"] .item-description [data-store="product-item-buy-button"],
-[data-store="category-products"] .item-description [data-store="product-item-buy-now"],
-[data-store="category-products"] [data-store="product-item-buy-button"],
-[data-store="category-products"] [data-store="product-item-buy-now"],
-[data-store="products-list"] .item-actions a,
-[data-store="products-list"] .item-actions .btn,
-[data-store="products-list"] .item-buy,
-[data-store="products-list"] .item-buy a,
-[data-store="products-list"] .item-description .btn,
-[data-store="products-list"] .item-description .btn-primary,
-[data-store="products-list"] .item-description .btn-small,
-[data-store="products-list"] .item-description .btn-link,
-[data-store="products-list"] .item-description [data-store="product-item-buy-button"],
-[data-store="products-list"] .item-description [data-store="product-item-buy-now"],
-[data-store="products-list"] [data-store="product-item-buy-button"],
-[data-store="products-list"] [data-store="product-item-buy-now"],
-[data-store="search-results"] .item-actions a,
-[data-store="search-results"] .item-actions .btn,
-[data-store="search-results"] .item-buy,
-[data-store="search-results"] .item-buy a,
-[data-store="search-results"] .item-description .btn,
-[data-store="search-results"] .item-description .btn-primary,
-[data-store="search-results"] .item-description .btn-small,
-[data-store="search-results"] .item-description .btn-link,
-[data-store="search-results"] .item-description [data-store="product-item-buy-button"],
-[data-store="search-results"] .item-description [data-store="product-item-buy-now"],
-[data-store="search-results"] [data-store="product-item-buy-button"],
-[data-store="search-results"] [data-store="product-item-buy-now"] {
+:is(.section-featured-home, .js-products-grid, .products-grid, .product-table, .js-product-table, .js-category-products, [data-store="category-products"], [data-store="products-list"], [data-store="search-results"]) :is(.item-actions a, .item-actions .btn, .item-buy, .item-buy a, .item-description .btn, .item-description .btn-primary, .item-description .btn-small, .item-description .btn-link, .item-description [data-store="product-item-buy-button"], .item-description [data-store="product-item-buy-now"], [data-store="product-item-buy-button"], [data-store="product-item-buy-now"]) {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -1404,389 +1381,24 @@ svg.js-open-quickshop-icon.icon-inline.ml-1 {
   transition: background-color 0.2s ease, color 0.2s ease !important;
 }
 
-.section-featured-home .item-actions a:hover,
-.section-featured-home .item-actions .btn:hover,
-.section-featured-home .item-buy:hover,
-.section-featured-home .item-buy a:hover,
-.section-featured-home .item-description .btn:hover,
-.section-featured-home .item-description .btn-primary:hover,
-.section-featured-home .item-description .btn-small:hover,
-.section-featured-home .item-description .btn-link:hover,
-.section-featured-home .item-description [data-store="product-item-buy-button"]:hover,
-.section-featured-home .item-description [data-store="product-item-buy-now"]:hover,
-.section-featured-home [data-store="product-item-buy-button"]:hover,
-.section-featured-home [data-store="product-item-buy-now"]:hover,
-.js-products-grid .item-actions a:hover,
-.js-products-grid .item-actions .btn:hover,
-.js-products-grid .item-buy:hover,
-.js-products-grid .item-buy a:hover,
-.js-products-grid .item-description .btn:hover,
-.js-products-grid .item-description .btn-primary:hover,
-.js-products-grid .item-description .btn-small:hover,
-.js-products-grid .item-description .btn-link:hover,
-.js-products-grid .item-description [data-store="product-item-buy-button"]:hover,
-.js-products-grid .item-description [data-store="product-item-buy-now"]:hover,
-.js-products-grid [data-store="product-item-buy-button"]:hover,
-.js-products-grid [data-store="product-item-buy-now"]:hover,
-.products-grid .item-actions a:hover,
-.products-grid .item-actions .btn:hover,
-.products-grid .item-buy:hover,
-.products-grid .item-buy a:hover,
-.products-grid .item-description .btn:hover,
-.products-grid .item-description .btn-primary:hover,
-.products-grid .item-description .btn-small:hover,
-.products-grid .item-description .btn-link:hover,
-.products-grid .item-description [data-store="product-item-buy-button"]:hover,
-.products-grid .item-description [data-store="product-item-buy-now"]:hover,
-.products-grid [data-store="product-item-buy-button"]:hover,
-.products-grid [data-store="product-item-buy-now"]:hover,
-.product-table .item-actions a:hover,
-.product-table .item-actions .btn:hover,
-.product-table .item-buy:hover,
-.product-table .item-buy a:hover,
-.product-table .item-description .btn:hover,
-.product-table .item-description .btn-primary:hover,
-.product-table .item-description .btn-small:hover,
-.product-table .item-description .btn-link:hover,
-.product-table .item-description [data-store="product-item-buy-button"]:hover,
-.product-table .item-description [data-store="product-item-buy-now"]:hover,
-.product-table [data-store="product-item-buy-button"]:hover,
-.product-table [data-store="product-item-buy-now"]:hover,
-.js-product-table .item-actions a:hover,
-.js-product-table .item-actions .btn:hover,
-.js-product-table .item-buy:hover,
-.js-product-table .item-buy a:hover,
-.js-product-table .item-description .btn:hover,
-.js-product-table .item-description .btn-primary:hover,
-.js-product-table .item-description .btn-small:hover,
-.js-product-table .item-description .btn-link:hover,
-.js-product-table .item-description [data-store="product-item-buy-button"]:hover,
-.js-product-table .item-description [data-store="product-item-buy-now"]:hover,
-.js-product-table [data-store="product-item-buy-button"]:hover,
-.js-product-table [data-store="product-item-buy-now"]:hover,
-.js-category-products .item-actions a:hover,
-.js-category-products .item-actions .btn:hover,
-.js-category-products .item-buy:hover,
-.js-category-products .item-buy a:hover,
-.js-category-products .item-description .btn:hover,
-.js-category-products .item-description .btn-primary:hover,
-.js-category-products .item-description .btn-small:hover,
-.js-category-products .item-description .btn-link:hover,
-.js-category-products .item-description [data-store="product-item-buy-button"]:hover,
-.js-category-products .item-description [data-store="product-item-buy-now"]:hover,
-.js-category-products [data-store="product-item-buy-button"]:hover,
-.js-category-products [data-store="product-item-buy-now"]:hover,
-[data-store="category-products"] .item-actions a:hover,
-[data-store="category-products"] .item-actions .btn:hover,
-[data-store="category-products"] .item-buy:hover,
-[data-store="category-products"] .item-buy a:hover,
-[data-store="category-products"] .item-description .btn:hover,
-[data-store="category-products"] .item-description .btn-primary:hover,
-[data-store="category-products"] .item-description .btn-small:hover,
-[data-store="category-products"] .item-description .btn-link:hover,
-[data-store="category-products"] .item-description [data-store="product-item-buy-button"]:hover,
-[data-store="category-products"] .item-description [data-store="product-item-buy-now"]:hover,
-[data-store="category-products"] [data-store="product-item-buy-button"]:hover,
-[data-store="category-products"] [data-store="product-item-buy-now"]:hover,
-[data-store="products-list"] .item-actions a:hover,
-[data-store="products-list"] .item-actions .btn:hover,
-[data-store="products-list"] .item-buy:hover,
-[data-store="products-list"] .item-buy a:hover,
-[data-store="products-list"] .item-description .btn:hover,
-[data-store="products-list"] .item-description .btn-primary:hover,
-[data-store="products-list"] .item-description .btn-small:hover,
-[data-store="products-list"] .item-description .btn-link:hover,
-[data-store="products-list"] .item-description [data-store="product-item-buy-button"]:hover,
-[data-store="products-list"] .item-description [data-store="product-item-buy-now"]:hover,
-[data-store="products-list"] [data-store="product-item-buy-button"]:hover,
-[data-store="products-list"] [data-store="product-item-buy-now"]:hover,
-[data-store="search-results"] .item-actions a:hover,
-[data-store="search-results"] .item-actions .btn:hover,
-[data-store="search-results"] .item-buy:hover,
-[data-store="search-results"] .item-buy a:hover,
-[data-store="search-results"] .item-description .btn:hover,
-[data-store="search-results"] .item-description .btn-primary:hover,
-[data-store="search-results"] .item-description .btn-small:hover,
-[data-store="search-results"] .item-description .btn-link:hover,
-[data-store="search-results"] .item-description [data-store="product-item-buy-button"]:hover,
-[data-store="search-results"] .item-description [data-store="product-item-buy-now"]:hover,
-[data-store="search-results"] [data-store="product-item-buy-button"]:hover,
-[data-store="search-results"] [data-store="product-item-buy-now"]:hover {
+:is(.section-featured-home, .js-products-grid, .products-grid, .product-table, .js-product-table, .js-category-products, [data-store="category-products"], [data-store="products-list"], [data-store="search-results"]) :is(.item-actions a, .item-actions .btn, .item-buy, .item-buy a, .item-description .btn, .item-description .btn-primary, .item-description .btn-small, .item-description .btn-link, .item-description [data-store="product-item-buy-button"], .item-description [data-store="product-item-buy-now"], [data-store="product-item-buy-button"], [data-store="product-item-buy-now"]):hover {
   background-color: #e0e0e0 !important;
   border-color: #e0e0e0 !important;
   color: #111111 !important;
   text-decoration: none !important;
 }
 
-.section-featured-home .item-actions a *,
-.section-featured-home .item-actions .btn *,
-.section-featured-home .item-buy *,
-.section-featured-home .item-buy a *,
-.section-featured-home .item-description .btn *,
-.section-featured-home .item-description .btn-primary *,
-.section-featured-home .item-description .btn-small *,
-.section-featured-home .item-description .btn-link *,
-.section-featured-home .item-description [data-store="product-item-buy-button"] *,
-.section-featured-home .item-description [data-store="product-item-buy-now"] *,
-.section-featured-home [data-store="product-item-buy-button"] *,
-.section-featured-home [data-store="product-item-buy-now"] *,
-.js-products-grid .item-actions a *,
-.js-products-grid .item-actions .btn *,
-.js-products-grid .item-buy *,
-.js-products-grid .item-buy a *,
-.js-products-grid .item-description .btn *,
-.js-products-grid .item-description .btn-primary *,
-.js-products-grid .item-description .btn-small *,
-.js-products-grid .item-description .btn-link *,
-.js-products-grid .item-description [data-store="product-item-buy-button"] *,
-.js-products-grid .item-description [data-store="product-item-buy-now"] *,
-.js-products-grid [data-store="product-item-buy-button"] *,
-.js-products-grid [data-store="product-item-buy-now"] *,
-.products-grid .item-actions a *,
-.products-grid .item-actions .btn *,
-.products-grid .item-buy *,
-.products-grid .item-buy a *,
-.products-grid .item-description .btn *,
-.products-grid .item-description .btn-primary *,
-.products-grid .item-description .btn-small *,
-.products-grid .item-description .btn-link *,
-.products-grid .item-description [data-store="product-item-buy-button"] *,
-.products-grid .item-description [data-store="product-item-buy-now"] *,
-.products-grid [data-store="product-item-buy-button"] *,
-.products-grid [data-store="product-item-buy-now"] *,
-.product-table .item-actions a *,
-.product-table .item-actions .btn *,
-.product-table .item-buy *,
-.product-table .item-buy a *,
-.product-table .item-description .btn *,
-.product-table .item-description .btn-primary *,
-.product-table .item-description .btn-small *,
-.product-table .item-description .btn-link *,
-.product-table .item-description [data-store="product-item-buy-button"] *,
-.product-table .item-description [data-store="product-item-buy-now"] *,
-.product-table [data-store="product-item-buy-button"] *,
-.product-table [data-store="product-item-buy-now"] *,
-.js-product-table .item-actions a *,
-.js-product-table .item-actions .btn *,
-.js-product-table .item-buy *,
-.js-product-table .item-buy a *,
-.js-product-table .item-description .btn *,
-.js-product-table .item-description .btn-primary *,
-.js-product-table .item-description .btn-small *,
-.js-product-table .item-description .btn-link *,
-.js-product-table .item-description [data-store="product-item-buy-button"] *,
-.js-product-table .item-description [data-store="product-item-buy-now"] *,
-.js-product-table [data-store="product-item-buy-button"] *,
-.js-product-table [data-store="product-item-buy-now"] *,
-.js-category-products .item-actions a *,
-.js-category-products .item-actions .btn *,
-.js-category-products .item-buy *,
-.js-category-products .item-buy a *,
-.js-category-products .item-description .btn *,
-.js-category-products .item-description .btn-primary *,
-.js-category-products .item-description .btn-small *,
-.js-category-products .item-description .btn-link *,
-.js-category-products .item-description [data-store="product-item-buy-button"] *,
-.js-category-products .item-description [data-store="product-item-buy-now"] *,
-.js-category-products [data-store="product-item-buy-button"] *,
-.js-category-products [data-store="product-item-buy-now"] *,
-[data-store="category-products"] .item-actions a *,
-[data-store="category-products"] .item-actions .btn *,
-[data-store="category-products"] .item-buy *,
-[data-store="category-products"] .item-buy a *,
-[data-store="category-products"] .item-description .btn *,
-[data-store="category-products"] .item-description .btn-primary *,
-[data-store="category-products"] .item-description .btn-small *,
-[data-store="category-products"] .item-description .btn-link *,
-[data-store="category-products"] .item-description [data-store="product-item-buy-button"] *,
-[data-store="category-products"] .item-description [data-store="product-item-buy-now"] *,
-[data-store="category-products"] [data-store="product-item-buy-button"] *,
-[data-store="category-products"] [data-store="product-item-buy-now"] *,
-[data-store="products-list"] .item-actions a *,
-[data-store="products-list"] .item-actions .btn *,
-[data-store="products-list"] .item-buy *,
-[data-store="products-list"] .item-buy a *,
-[data-store="products-list"] .item-description .btn *,
-[data-store="products-list"] .item-description .btn-primary *,
-[data-store="products-list"] .item-description .btn-small *,
-[data-store="products-list"] .item-description .btn-link *,
-[data-store="products-list"] .item-description [data-store="product-item-buy-button"] *,
-[data-store="products-list"] .item-description [data-store="product-item-buy-now"] *,
-[data-store="products-list"] [data-store="product-item-buy-button"] *,
-[data-store="products-list"] [data-store="product-item-buy-now"] *,
-[data-store="search-results"] .item-actions a *,
-[data-store="search-results"] .item-actions .btn *,
-[data-store="search-results"] .item-buy *,
-[data-store="search-results"] .item-buy a *,
-[data-store="search-results"] .item-description .btn *,
-[data-store="search-results"] .item-description .btn-primary *,
-[data-store="search-results"] .item-description .btn-small *,
-[data-store="search-results"] .item-description .btn-link *,
-[data-store="search-results"] .item-description [data-store="product-item-buy-button"] *,
-[data-store="search-results"] .item-description [data-store="product-item-buy-now"] *,
-[data-store="search-results"] [data-store="product-item-buy-button"] *,
-[data-store="search-results"] [data-store="product-item-buy-now"] * {
+:is(.section-featured-home, .js-products-grid, .products-grid, .product-table, .js-product-table, .js-category-products, [data-store="category-products"], [data-store="products-list"], [data-store="search-results"]) :is(.item-actions a, .item-actions .btn, .item-buy, .item-buy a, .item-description .btn, .item-description .btn-primary, .item-description .btn-small, .item-description .btn-link, .item-description [data-store="product-item-buy-button"], .item-description [data-store="product-item-buy-now"], [data-store="product-item-buy-button"], [data-store="product-item-buy-now"]) * {
   color: inherit !important;
   text-transform: uppercase !important;
 }
 
-.section-featured-home .item-buy svg,
-.section-featured-home .item-buy i,
-.section-featured-home .item-description .btn svg,
-.section-featured-home .item-description .btn i,
-.section-featured-home .item-description .btn-link svg,
-.section-featured-home .item-description .btn-link i,
-.section-featured-home [data-store="product-item-buy-button"] svg,
-.section-featured-home [data-store="product-item-buy-button"] i,
-.section-featured-home [data-store="product-item-buy-now"] svg,
-.section-featured-home [data-store="product-item-buy-now"] i,
-.js-products-grid .item-buy svg,
-.js-products-grid .item-buy i,
-.js-products-grid .item-description .btn svg,
-.js-products-grid .item-description .btn i,
-.js-products-grid .item-description .btn-link svg,
-.js-products-grid .item-description .btn-link i,
-.js-products-grid [data-store="product-item-buy-button"] svg,
-.js-products-grid [data-store="product-item-buy-button"] i,
-.js-products-grid [data-store="product-item-buy-now"] svg,
-.js-products-grid [data-store="product-item-buy-now"] i,
-.products-grid .item-buy svg,
-.products-grid .item-buy i,
-.products-grid .item-description .btn svg,
-.products-grid .item-description .btn i,
-.products-grid .item-description .btn-link svg,
-.products-grid .item-description .btn-link i,
-.products-grid [data-store="product-item-buy-button"] svg,
-.products-grid [data-store="product-item-buy-button"] i,
-.products-grid [data-store="product-item-buy-now"] svg,
-.products-grid [data-store="product-item-buy-now"] i,
-.product-table .item-buy svg,
-.product-table .item-buy i,
-.product-table .item-description .btn svg,
-.product-table .item-description .btn i,
-.product-table .item-description .btn-link svg,
-.product-table .item-description .btn-link i,
-.product-table [data-store="product-item-buy-button"] svg,
-.product-table [data-store="product-item-buy-button"] i,
-.product-table [data-store="product-item-buy-now"] svg,
-.product-table [data-store="product-item-buy-now"] i,
-.js-product-table .item-buy svg,
-.js-product-table .item-buy i,
-.js-product-table .item-description .btn svg,
-.js-product-table .item-description .btn i,
-.js-product-table .item-description .btn-link svg,
-.js-product-table .item-description .btn-link i,
-.js-product-table [data-store="product-item-buy-button"] svg,
-.js-product-table [data-store="product-item-buy-button"] i,
-.js-product-table [data-store="product-item-buy-now"] svg,
-.js-product-table [data-store="product-item-buy-now"] i,
-.js-category-products .item-buy svg,
-.js-category-products .item-buy i,
-.js-category-products .item-description .btn svg,
-.js-category-products .item-description .btn i,
-.js-category-products .item-description .btn-link svg,
-.js-category-products .item-description .btn-link i,
-.js-category-products [data-store="product-item-buy-button"] svg,
-.js-category-products [data-store="product-item-buy-button"] i,
-.js-category-products [data-store="product-item-buy-now"] svg,
-.js-category-products [data-store="product-item-buy-now"] i,
-[data-store="category-products"] .item-buy svg,
-[data-store="category-products"] .item-buy i,
-[data-store="category-products"] .item-description .btn svg,
-[data-store="category-products"] .item-description .btn i,
-[data-store="category-products"] .item-description .btn-link svg,
-[data-store="category-products"] .item-description .btn-link i,
-[data-store="category-products"] [data-store="product-item-buy-button"] svg,
-[data-store="category-products"] [data-store="product-item-buy-button"] i,
-[data-store="category-products"] [data-store="product-item-buy-now"] svg,
-[data-store="category-products"] [data-store="product-item-buy-now"] i,
-[data-store="products-list"] .item-buy svg,
-[data-store="products-list"] .item-buy i,
-[data-store="products-list"] .item-description .btn svg,
-[data-store="products-list"] .item-description .btn i,
-[data-store="products-list"] .item-description .btn-link svg,
-[data-store="products-list"] .item-description .btn-link i,
-[data-store="products-list"] [data-store="product-item-buy-button"] svg,
-[data-store="products-list"] [data-store="product-item-buy-button"] i,
-[data-store="products-list"] [data-store="product-item-buy-now"] svg,
-[data-store="products-list"] [data-store="product-item-buy-now"] i,
-[data-store="search-results"] .item-buy svg,
-[data-store="search-results"] .item-buy i,
-[data-store="search-results"] .item-description .btn svg,
-[data-store="search-results"] .item-description .btn i,
-[data-store="search-results"] .item-description .btn-link svg,
-[data-store="search-results"] .item-description .btn-link i,
-[data-store="search-results"] [data-store="product-item-buy-button"] svg,
-[data-store="search-results"] [data-store="product-item-buy-button"] i,
-[data-store="search-results"] [data-store="product-item-buy-now"] svg,
-[data-store="search-results"] [data-store="product-item-buy-now"] i {
+:is(.section-featured-home, .js-products-grid, .products-grid, .product-table, .js-product-table, .js-category-products, [data-store="category-products"], [data-store="products-list"], [data-store="search-results"]) :is(.item-buy svg, .item-buy i, .item-description .btn svg, .item-description .btn i, .item-description .btn-link svg, .item-description .btn-link i, [data-store="product-item-buy-button"] svg, [data-store="product-item-buy-button"] i, [data-store="product-item-buy-now"] svg, [data-store="product-item-buy-now"] i) {
   display: none !important;
 }
 
 /* Hover: hijos heredan color del padre */
-.section-featured-home .item-actions a:hover *,
-.section-featured-home .item-buy:hover *,
-.section-featured-home .item-buy a:hover *,
-.section-featured-home .item-description .btn:hover *,
-.section-featured-home .item-description .btn-link:hover *,
-.section-featured-home [data-store="product-item-buy-button"]:hover *,
-.section-featured-home [data-store="product-item-buy-now"]:hover *,
-.js-products-grid .item-actions a:hover *,
-.js-products-grid .item-buy:hover *,
-.js-products-grid .item-buy a:hover *,
-.js-products-grid .item-description .btn:hover *,
-.js-products-grid .item-description .btn-link:hover *,
-.js-products-grid [data-store="product-item-buy-button"]:hover *,
-.js-products-grid [data-store="product-item-buy-now"]:hover *,
-.products-grid .item-actions a:hover *,
-.products-grid .item-buy:hover *,
-.products-grid .item-buy a:hover *,
-.products-grid .item-description .btn:hover *,
-.products-grid .item-description .btn-link:hover *,
-.products-grid [data-store="product-item-buy-button"]:hover *,
-.products-grid [data-store="product-item-buy-now"]:hover *,
-.product-table .item-actions a:hover *,
-.product-table .item-buy:hover *,
-.product-table .item-buy a:hover *,
-.product-table .item-description .btn:hover *,
-.product-table .item-description .btn-link:hover *,
-.product-table [data-store="product-item-buy-button"]:hover *,
-.product-table [data-store="product-item-buy-now"]:hover *,
-.js-product-table .item-actions a:hover *,
-.js-product-table .item-buy:hover *,
-.js-product-table .item-buy a:hover *,
-.js-product-table .item-description .btn:hover *,
-.js-product-table .item-description .btn-link:hover *,
-.js-product-table [data-store="product-item-buy-button"]:hover *,
-.js-product-table [data-store="product-item-buy-now"]:hover *,
-.js-category-products .item-actions a:hover *,
-.js-category-products .item-buy:hover *,
-.js-category-products .item-buy a:hover *,
-.js-category-products .item-description .btn:hover *,
-.js-category-products .item-description .btn-link:hover *,
-.js-category-products [data-store="product-item-buy-button"]:hover *,
-.js-category-products [data-store="product-item-buy-now"]:hover *,
-[data-store="category-products"] .item-actions a:hover *,
-[data-store="category-products"] .item-buy:hover *,
-[data-store="category-products"] .item-buy a:hover *,
-[data-store="category-products"] .item-description .btn:hover *,
-[data-store="category-products"] .item-description .btn-link:hover *,
-[data-store="category-products"] [data-store="product-item-buy-button"]:hover *,
-[data-store="category-products"] [data-store="product-item-buy-now"]:hover *,
-[data-store="products-list"] .item-actions a:hover *,
-[data-store="products-list"] .item-buy:hover *,
-[data-store="products-list"] .item-buy a:hover *,
-[data-store="products-list"] .item-description .btn:hover *,
-[data-store="products-list"] .item-description .btn-link:hover *,
-[data-store="products-list"] [data-store="product-item-buy-button"]:hover *,
-[data-store="products-list"] [data-store="product-item-buy-now"]:hover *,
-[data-store="search-results"] .item-actions a:hover *,
-[data-store="search-results"] .item-buy:hover *,
-[data-store="search-results"] .item-buy a:hover *,
-[data-store="search-results"] .item-description .btn:hover *,
-[data-store="search-results"] .item-description .btn-link:hover *,
-[data-store="search-results"] [data-store="product-item-buy-button"]:hover *,
-[data-store="search-results"] [data-store="product-item-buy-now"]:hover * {
+:is(.section-featured-home, .js-products-grid, .products-grid, .product-table, .js-product-table, .js-category-products, [data-store="category-products"], [data-store="products-list"], [data-store="search-results"]) :is(.item-actions a, .item-buy, .item-buy a, .item-description .btn, .item-description .btn-link, [data-store="product-item-buy-button"], [data-store="product-item-buy-now"]):hover * {
   color: #111111 !important;
 }
 
@@ -1795,77 +1407,22 @@ svg.js-open-quickshop-icon.icon-inline.ml-1 {
    NAVEGACION + FILTROS + PAGINACION
    ======================================== */
 
-.js-products-sidebar,
-.js-filters-container,
-.js-products-filters,
-.sidebar-filters,
-.filters-container,
-.category-sidebar,
-.collection-sidebar,
-.js-products-categories,
-.js-category-sidebar {
+:is(.js-products-sidebar, .js-filters-container, .js-products-filters, .sidebar-filters, .filters-container, .category-sidebar, .collection-sidebar, .js-products-categories, .js-category-sidebar) {
   color: #111111 !important;
 }
 
-.js-products-sidebar a,
-.js-filters-container a,
-.js-products-filters a,
-.sidebar-filters a,
-.filters-container a,
-.category-sidebar a,
-.collection-sidebar a,
-.js-products-categories a,
-.js-category-sidebar a {
+:is(.js-products-sidebar, .js-filters-container, .js-products-filters, .sidebar-filters, .filters-container, .category-sidebar, .collection-sidebar, .js-products-categories, .js-category-sidebar) a {
   color: #111111 !important;
   text-decoration: none !important;
   transition: color 0.2s ease, opacity 0.2s ease !important;
 }
 
-.js-products-sidebar a:hover,
-.js-filters-container a:hover,
-.js-products-filters a:hover,
-.sidebar-filters a:hover,
-.filters-container a:hover,
-.category-sidebar a:hover,
-.collection-sidebar a:hover,
-.js-products-categories a:hover,
-.js-category-sidebar a:hover {
+:is(.js-products-sidebar, .js-filters-container, .js-products-filters, .sidebar-filters, .filters-container, .category-sidebar, .collection-sidebar, .js-products-categories, .js-category-sidebar) a:hover {
   color: #111111 !important;
   opacity: 1 !important;
 }
 
-.js-products-sidebar .title,
-.js-products-sidebar .subtitle,
-.js-products-sidebar h2,
-.js-products-sidebar h3,
-.js-filters-container .title,
-.js-filters-container .subtitle,
-.js-filters-container h2,
-.js-filters-container h3,
-.js-products-filters .title,
-.js-products-filters .subtitle,
-.js-products-filters h2,
-.js-products-filters h3,
-.filters-container .title,
-.filters-container .subtitle,
-.filters-container h2,
-.filters-container h3,
-.category-sidebar .title,
-.category-sidebar .subtitle,
-.category-sidebar h2,
-.category-sidebar h3,
-.collection-sidebar .title,
-.collection-sidebar .subtitle,
-.collection-sidebar h2,
-.collection-sidebar h3,
-.js-products-categories .title,
-.js-products-categories .subtitle,
-.js-products-categories h2,
-.js-products-categories h3,
-.js-category-sidebar .title,
-.js-category-sidebar .subtitle,
-.js-category-sidebar h2,
-.js-category-sidebar h3 {
+:is(.js-products-sidebar, .js-filters-container, .js-products-filters, .sidebar-filters, .filters-container, .category-sidebar, .collection-sidebar, .js-products-categories, .js-category-sidebar) :is(.title, .subtitle, h2, h3) {
   font-size: 11px !important;
   font-weight: 600 !important;
   letter-spacing: 0.13em !important;
@@ -1874,50 +1431,17 @@ svg.js-open-quickshop-icon.icon-inline.ml-1 {
   margin-bottom: 0.85rem !important;
 }
 
-.js-products-sidebar ul,
-.js-filters-container ul,
-.js-products-filters ul,
-.sidebar-filters ul,
-.filters-container ul,
-.category-sidebar ul,
-.collection-sidebar ul,
-.js-products-categories ul,
-.js-category-sidebar ul {
+:is(.js-products-sidebar, .js-filters-container, .js-products-filters, .sidebar-filters, .filters-container, .category-sidebar, .collection-sidebar, .js-products-categories, .js-category-sidebar) ul {
   list-style: none !important;
   padding-left: 0 !important;
   margin-bottom: 1.4rem !important;
 }
 
-.js-products-sidebar li,
-.js-filters-container li,
-.js-products-filters li,
-.sidebar-filters li,
-.filters-container li,
-.category-sidebar li,
-.collection-sidebar li,
-.js-products-categories li,
-.js-category-sidebar li {
+:is(.js-products-sidebar, .js-filters-container, .js-products-filters, .sidebar-filters, .filters-container, .category-sidebar, .collection-sidebar, .js-products-categories, .js-category-sidebar) li {
   margin-bottom: 0.55rem !important;
 }
 
-.js-products-sidebar li a,
-.js-filters-container li a,
-.js-products-filters li a,
-.sidebar-filters li a,
-.filters-container li a,
-.category-sidebar li a,
-.collection-sidebar li a,
-.js-products-categories li a,
-.js-category-sidebar li a,
-.js-products-sidebar label,
-.js-filters-container label,
-.js-products-filters label,
-.sidebar-filters label,
-.filters-container label,
-.category-sidebar label,
-.collection-sidebar label,
-.js-products-categories label,
-.js-category-sidebar label {
+:is(.js-products-sidebar, .js-filters-container, .js-products-filters, .sidebar-filters, .filters-container, .category-sidebar, .collection-sidebar, .js-products-categories, .js-category-sidebar) :is(li a, label) {
   font-size: 12px !important;
   font-weight: 300 !important;
   letter-spacing: 0.02em !important;
@@ -1925,102 +1449,26 @@ svg.js-open-quickshop-icon.icon-inline.ml-1 {
   color: #444444 !important;
 }
 
-.js-products-sidebar input[type="checkbox"],
-.js-filters-container input[type="checkbox"],
-.js-products-filters input[type="checkbox"],
-.sidebar-filters input[type="checkbox"],
-.filters-container input[type="checkbox"],
-.category-sidebar input[type="checkbox"],
-.collection-sidebar input[type="checkbox"],
-.js-products-categories input[type="checkbox"],
-.js-category-sidebar input[type="checkbox"],
-.js-products-sidebar input[type="radio"],
-.js-filters-container input[type="radio"],
-.js-products-filters input[type="radio"],
-.sidebar-filters input[type="radio"],
-.filters-container input[type="radio"],
-.category-sidebar input[type="radio"],
-.collection-sidebar input[type="radio"],
-.js-products-categories input[type="radio"],
-.js-category-sidebar input[type="radio"] {
+:is(.js-products-sidebar, .js-filters-container, .js-products-filters, .sidebar-filters, .filters-container, .category-sidebar, .collection-sidebar, .js-products-categories, .js-category-sidebar) :is(input[type="checkbox"], input[type="radio"]) {
   accent-color: #111111 !important;
 }
 
-.js-products-sidebar .selected,
-.js-products-sidebar .active,
-.js-products-sidebar .is-active,
-.js-filters-container .selected,
-.js-filters-container .active,
-.js-filters-container .is-active,
-.js-products-filters .selected,
-.js-products-filters .active,
-.js-products-filters .is-active,
-.sidebar-filters .selected,
-.sidebar-filters .active,
-.sidebar-filters .is-active,
-.filters-container .selected,
-.filters-container .active,
-.filters-container .is-active,
-.category-sidebar .selected,
-.category-sidebar .active,
-.category-sidebar .is-active,
-.collection-sidebar .selected,
-.collection-sidebar .active,
-.collection-sidebar .is-active,
-.js-products-categories .selected,
-.js-products-categories .active,
-.js-products-categories .is-active,
-.js-category-sidebar .selected,
-.js-category-sidebar .active,
-.js-category-sidebar .is-active {
+:is(.js-products-sidebar, .js-filters-container, .js-products-filters, .sidebar-filters, .filters-container, .category-sidebar, .collection-sidebar, .js-products-categories, .js-category-sidebar) :is(.selected, .active, .is-active) {
   color: #111111 !important;
   font-weight: 500 !important;
 }
 
-.js-products-sidebar hr,
-.js-filters-container hr,
-.js-products-filters hr,
-.sidebar-filters hr,
-.filters-container hr,
-.category-sidebar hr,
-.collection-sidebar hr,
-.js-products-categories hr,
-.js-category-sidebar hr,
-.js-products-sidebar .divider,
-.js-filters-container .divider,
-.js-products-filters .divider,
-.sidebar-filters .divider,
-.filters-container .divider,
-.category-sidebar .divider,
-.collection-sidebar .divider,
-.js-products-categories .divider,
-.js-category-sidebar .divider {
+:is(.js-products-sidebar, .js-filters-container, .js-products-filters, .sidebar-filters, .filters-container, .category-sidebar, .collection-sidebar, .js-products-categories, .js-category-sidebar) :is(hr, .divider) {
   border-color: #ebebeb !important;
   opacity: 1 !important;
 }
 
-.pagination,
-.js-pagination,
-.pagination-container,
-.js-pagination-container,
-.pager,
-.js-pager {
+:is(.pagination, .js-pagination, .pagination-container, .js-pagination-container, .pager, .js-pager) {
   margin-top: 2.25rem !important;
   margin-bottom: 1rem !important;
 }
 
-.pagination a,
-.pagination span,
-.js-pagination a,
-.js-pagination span,
-.pagination-container a,
-.pagination-container span,
-.js-pagination-container a,
-.js-pagination-container span,
-.pager a,
-.pager span,
-.js-pager a,
-.js-pager span {
+:is(.pagination, .js-pagination, .pagination-container, .js-pagination-container, .pager, .js-pager) :is(a, span) {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -2039,53 +1487,23 @@ svg.js-open-quickshop-icon.icon-inline.ml-1 {
   transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease !important;
 }
 
-.pagination a:hover,
-.js-pagination a:hover,
-.pagination-container a:hover,
-.js-pagination-container a:hover,
-.pager a:hover,
-.js-pager a:hover {
+:is(.pagination, .js-pagination, .pagination-container, .js-pagination-container, .pager, .js-pager) a:hover {
   background-color: #111111 !important;
   border-color: #111111 !important;
   color: #ffffff !important;
 }
 
-.pagination .active a,
-.pagination .active span,
-.js-pagination .active a,
-.js-pagination .active span,
-.pagination-container .active a,
-.pagination-container .active span,
-.js-pagination-container .active a,
-.js-pagination-container .active span,
-.pager .active a,
-.pager .active span,
-.js-pager .active a,
-.js-pager .active span {
+:is(.pagination, .js-pagination, .pagination-container, .js-pagination-container, .pager, .js-pager) .active :is(a, span) {
   background-color: #111111 !important;
   border-color: #111111 !important;
   color: #ffffff !important;
 }
 
-.sort-by,
-.js-sort-by,
-.js-view-change,
-.js-products-order-by,
-.js-products-controls,
-.products-controls {
+:is(.sort-by, .js-sort-by, .js-view-change, .js-products-order-by, .js-products-controls, .products-controls) {
   color: #111111 !important;
 }
 
-.sort-by select,
-.js-sort-by select,
-.js-products-order-by select,
-.js-products-controls select,
-.products-controls select,
-.sort-by .form-select,
-.js-sort-by .form-select,
-.js-products-order-by .form-select,
-.js-products-controls .form-select,
-.products-controls .form-select {
+:is(.sort-by, .js-sort-by, .js-products-order-by, .js-products-controls, .products-controls) :is(select, .form-select) {
   border-radius: 0 !important;
   border-color: #d4d4d4 !important;
   color: #111111 !important;
@@ -2250,269 +1668,95 @@ svg.js-open-quickshop-icon.icon-inline.ml-1 {
     font-size: 11px !important;
   }
 
-  .section-featured-home [data-store^="product-item-name-"],
-  .section-featured-home .item-name,
-  .section-featured-home .js-item-name,
-  .js-products-grid [data-store^="product-item-name-"],
-  .js-products-grid .item-name,
-  .js-products-grid .js-item-name,
-  .products-grid [data-store^="product-item-name-"],
-  .products-grid .item-name,
-  .products-grid .js-item-name,
-  .product-table [data-store^="product-item-name-"],
-  .product-table .item-name,
-  .product-table .js-item-name,
-  .js-product-table [data-store^="product-item-name-"],
-  .js-product-table .item-name,
-  .js-product-table .js-item-name,
-  .js-category-products [data-store^="product-item-name-"],
-  .js-category-products .item-name,
-  .js-category-products .js-item-name,
-  [data-store="category-products"] [data-store^="product-item-name-"],
-  [data-store="category-products"] .item-name,
-  [data-store="category-products"] .js-item-name,
-  [data-store="products-list"] [data-store^="product-item-name-"],
-  [data-store="products-list"] .item-name,
-  [data-store="products-list"] .js-item-name,
-  [data-store="search-results"] [data-store^="product-item-name-"],
-  [data-store="search-results"] .item-name,
-  [data-store="search-results"] .js-item-name {
+  /* ---- Product cards mobile (grilla) ---- */
+
+  :is(.section-featured-home, .js-products-grid, .products-grid, .product-table, .js-product-table, .js-category-products, [data-store="category-products"], [data-store="products-list"], [data-store="search-results"]) :is([data-store^="product-item-name-"], .item-name, .js-item-name) {
     font-size: 12px !important;
     letter-spacing: 0.06em !important;
     line-height: 1.25 !important;
   }
 
-  .section-featured-home .item-actions a,
-  .section-featured-home .item-actions .btn,
-  .section-featured-home .item-buy,
-  .section-featured-home .item-buy a,
-  .section-featured-home .item-description .btn,
-  .section-featured-home .item-description .btn-primary,
-  .section-featured-home .item-description .btn-small,
-  .section-featured-home .item-description .btn-link,
-  .section-featured-home .item-description [data-store="product-item-buy-button"],
-  .section-featured-home .item-description [data-store="product-item-buy-now"],
-  .section-featured-home [data-store="product-item-buy-button"],
-  .section-featured-home [data-store="product-item-buy-now"],
-  .js-products-grid .item-actions a,
-  .js-products-grid .item-actions .btn,
-  .js-products-grid .item-buy,
-  .js-products-grid .item-buy a,
-  .js-products-grid .item-description .btn,
-  .js-products-grid .item-description .btn-primary,
-  .js-products-grid .item-description .btn-small,
-  .js-products-grid .item-description .btn-link,
-  .js-products-grid .item-description [data-store="product-item-buy-button"],
-  .js-products-grid .item-description [data-store="product-item-buy-now"],
-  .js-products-grid [data-store="product-item-buy-button"],
-  .js-products-grid [data-store="product-item-buy-now"],
-  .products-grid .item-actions a,
-  .products-grid .item-actions .btn,
-  .products-grid .item-buy,
-  .products-grid .item-buy a,
-  .products-grid .item-description .btn,
-  .products-grid .item-description .btn-primary,
-  .products-grid .item-description .btn-small,
-  .products-grid .item-description .btn-link,
-  .products-grid .item-description [data-store="product-item-buy-button"],
-  .products-grid .item-description [data-store="product-item-buy-now"],
-  .products-grid [data-store="product-item-buy-button"],
-  .products-grid [data-store="product-item-buy-now"],
-  .product-table .item-actions a,
-  .product-table .item-actions .btn,
-  .product-table .item-buy,
-  .product-table .item-buy a,
-  .product-table .item-description .btn,
-  .product-table .item-description .btn-primary,
-  .product-table .item-description .btn-small,
-  .product-table .item-description .btn-link,
-  .product-table .item-description [data-store="product-item-buy-button"],
-  .product-table .item-description [data-store="product-item-buy-now"],
-  .product-table [data-store="product-item-buy-button"],
-  .product-table [data-store="product-item-buy-now"],
-  .js-product-table .item-actions a,
-  .js-product-table .item-actions .btn,
-  .js-product-table .item-buy,
-  .js-product-table .item-buy a,
-  .js-product-table .item-description .btn,
-  .js-product-table .item-description .btn-primary,
-  .js-product-table .item-description .btn-small,
-  .js-product-table .item-description .btn-link,
-  .js-product-table .item-description [data-store="product-item-buy-button"],
-  .js-product-table .item-description [data-store="product-item-buy-now"],
-  .js-product-table [data-store="product-item-buy-button"],
-  .js-product-table [data-store="product-item-buy-now"],
-  .js-category-products .item-actions a,
-  .js-category-products .item-actions .btn,
-  .js-category-products .item-buy,
-  .js-category-products .item-buy a,
-  .js-category-products .item-description .btn,
-  .js-category-products .item-description .btn-primary,
-  .js-category-products .item-description .btn-small,
-  .js-category-products .item-description .btn-link,
-  .js-category-products .item-description [data-store="product-item-buy-button"],
-  .js-category-products .item-description [data-store="product-item-buy-now"],
-  .js-category-products [data-store="product-item-buy-button"],
-  .js-category-products [data-store="product-item-buy-now"],
-  [data-store="category-products"] .item-actions a,
-  [data-store="category-products"] .item-actions .btn,
-  [data-store="category-products"] .item-buy,
-  [data-store="category-products"] .item-buy a,
-  [data-store="category-products"] .item-description .btn,
-  [data-store="category-products"] .item-description .btn-primary,
-  [data-store="category-products"] .item-description .btn-small,
-  [data-store="category-products"] .item-description .btn-link,
-  [data-store="category-products"] .item-description [data-store="product-item-buy-button"],
-  [data-store="category-products"] .item-description [data-store="product-item-buy-now"],
-  [data-store="category-products"] [data-store="product-item-buy-button"],
-  [data-store="category-products"] [data-store="product-item-buy-now"],
-  [data-store="products-list"] .item-actions a,
-  [data-store="products-list"] .item-actions .btn,
-  [data-store="products-list"] .item-buy,
-  [data-store="products-list"] .item-buy a,
-  [data-store="products-list"] .item-description .btn,
-  [data-store="products-list"] .item-description .btn-primary,
-  [data-store="products-list"] .item-description .btn-small,
-  [data-store="products-list"] .item-description .btn-link,
-  [data-store="products-list"] .item-description [data-store="product-item-buy-button"],
-  [data-store="products-list"] .item-description [data-store="product-item-buy-now"],
-  [data-store="products-list"] [data-store="product-item-buy-button"],
-  [data-store="products-list"] [data-store="product-item-buy-now"],
-  [data-store="search-results"] .item-actions a,
-  [data-store="search-results"] .item-actions .btn,
-  [data-store="search-results"] .item-buy,
-  [data-store="search-results"] .item-buy a,
-  [data-store="search-results"] .item-description .btn,
-  [data-store="search-results"] .item-description .btn-primary,
-  [data-store="search-results"] .item-description .btn-small,
-  [data-store="search-results"] .item-description .btn-link,
-  [data-store="search-results"] .item-description [data-store="product-item-buy-button"],
-  [data-store="search-results"] .item-description [data-store="product-item-buy-now"],
-  [data-store="search-results"] [data-store="product-item-buy-button"],
-  [data-store="search-results"] [data-store="product-item-buy-now"] {
+  :is(.section-featured-home, .js-products-grid, .products-grid, .product-table, .js-product-table, .js-category-products, [data-store="category-products"], [data-store="products-list"], [data-store="search-results"]) :is(.item-actions a, .item-actions .btn, .item-buy, .item-buy a, .item-description .btn, .item-description .btn-primary, .item-description .btn-small, .item-description .btn-link, .item-description [data-store="product-item-buy-button"], .item-description [data-store="product-item-buy-now"], [data-store="product-item-buy-button"], [data-store="product-item-buy-now"]) {
     min-height: auto !important;
     padding: 0.45rem 0.65rem !important;
     font-size: 9px !important;
   }
 
-  .section-featured-home .item-description,
-  .js-products-grid .item-description,
-  .products-grid .item-description,
-  .product-table .item-description,
-  .js-product-table .item-description,
-  .js-category-products .item-description,
-  [data-store="category-products"] .item-description,
-  [data-store="products-list"] .item-description,
-  [data-store="search-results"] .item-description {
+  :is(.section-featured-home, .js-products-grid, .products-grid, .product-table, .js-product-table, .js-category-products, [data-store="category-products"], [data-store="products-list"], [data-store="search-results"]) .item-description {
     padding-top: 0.65rem !important;
     padding-bottom: 1.25rem !important;
   }
 
-  .section-featured-home .item-price-container .item-price,
-  .section-featured-home .item-price-container [data-store^="product-item-price-"],
-  .js-products-grid .item-price-container .item-price,
-  .js-products-grid .item-price-container [data-store^="product-item-price-"],
-  .products-grid .item-price-container .item-price,
-  .products-grid .item-price-container [data-store^="product-item-price-"],
-  .product-table .item-price-container .item-price,
-  .product-table .item-price-container [data-store^="product-item-price-"],
-  .js-product-table .item-price-container .item-price,
-  .js-product-table .item-price-container [data-store^="product-item-price-"],
-  .js-category-products .item-price-container .item-price,
-  .js-category-products .item-price-container [data-store^="product-item-price-"],
-  [data-store="category-products"] .item-price-container .item-price,
-  [data-store="category-products"] .item-price-container [data-store^="product-item-price-"],
-  [data-store="products-list"] .item-price-container .item-price,
-  [data-store="products-list"] .item-price-container [data-store^="product-item-price-"],
-  [data-store="search-results"] .item-price-container .item-price,
-  [data-store="search-results"] .item-price-container [data-store^="product-item-price-"] {
+  :is(.section-featured-home, .js-products-grid, .products-grid, .product-table, .js-product-table, .js-category-products, [data-store="category-products"], [data-store="products-list"], [data-store="search-results"]) .item-price-container :is(.item-price, [data-store^="product-item-price-"]) {
     font-size: 12px !important;
   }
 
-  .js-products-sidebar,
-  .js-filters-container,
-  .js-products-filters,
-  .sidebar-filters,
-  .filters-container,
-  .category-sidebar,
-  .collection-sidebar,
-  .js-products-categories,
-  .js-category-sidebar {
+  /* ---- Categories / filters mobile ---- */
+
+  :is(.js-products-sidebar, .js-filters-container, .js-products-filters, .sidebar-filters, .filters-container, .category-sidebar, .collection-sidebar, .js-products-categories, .js-category-sidebar) {
     margin-bottom: 1.5rem !important;
   }
 
-  .js-products-sidebar .title,
-  .js-products-sidebar .subtitle,
-  .js-products-sidebar h2,
-  .js-products-sidebar h3,
-  .js-filters-container .title,
-  .js-filters-container .subtitle,
-  .js-filters-container h2,
-  .js-filters-container h3,
-  .js-products-filters .title,
-  .js-products-filters .subtitle,
-  .js-products-filters h2,
-  .js-products-filters h3,
-  .filters-container .title,
-  .filters-container .subtitle,
-  .filters-container h2,
-  .filters-container h3,
-  .category-sidebar .title,
-  .category-sidebar .subtitle,
-  .category-sidebar h2,
-  .category-sidebar h3,
-  .collection-sidebar .title,
-  .collection-sidebar .subtitle,
-  .collection-sidebar h2,
-  .collection-sidebar h3,
-  .js-products-categories .title,
-  .js-products-categories .subtitle,
-  .js-products-categories h2,
-  .js-products-categories h3,
-  .js-category-sidebar .title,
-  .js-category-sidebar .subtitle,
-  .js-category-sidebar h2,
-  .js-category-sidebar h3 {
+  :is(.js-products-sidebar, .js-filters-container, .js-products-filters, .sidebar-filters, .filters-container, .category-sidebar, .collection-sidebar, .js-products-categories, .js-category-sidebar) :is(.title, .subtitle, h2, h3) {
     font-size: 10px !important;
     margin-bottom: 0.7rem !important;
   }
 
-  .js-products-sidebar li a,
-  .js-filters-container li a,
-  .js-products-filters li a,
-  .sidebar-filters li a,
-  .filters-container li a,
-  .category-sidebar li a,
-  .collection-sidebar li a,
-  .js-products-categories li a,
-  .js-category-sidebar li a,
-  .js-products-sidebar label,
-  .js-filters-container label,
-  .js-products-filters label,
-  .sidebar-filters label,
-  .filters-container label,
-  .category-sidebar label,
-  .collection-sidebar label,
-  .js-products-categories label,
-  .js-category-sidebar label {
+  :is(.js-products-sidebar, .js-filters-container, .js-products-filters, .sidebar-filters, .filters-container, .category-sidebar, .collection-sidebar, .js-products-categories, .js-category-sidebar) :is(li a, label) {
     font-size: 11px !important;
   }
 
-  .pagination a,
-  .pagination span,
-  .js-pagination a,
-  .js-pagination span,
-  .pagination-container a,
-  .pagination-container span,
-  .js-pagination-container a,
-  .js-pagination-container span,
-  .pager a,
-  .pager span,
-  .js-pager a,
-  .js-pager span {
+  :is(.pagination, .js-pagination, .pagination-container, .js-pagination-container, .pager, .js-pager) :is(a, span) {
     min-width: 32px !important;
     min-height: 32px !important;
     padding: 0.3rem 0.55rem !important;
     font-size: 9px !important;
+  }
+
+  /* ---- Related / Complementary mobile ---- */
+
+  :is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) :is(.products-section-title, .products-section-title.h5) {
+    font-size: 16px !important;
+    letter-spacing: 0.07em !important;
+  }
+
+  :is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) .products-section-title-container {
+    margin-bottom: 1rem !important;
+  }
+
+  :is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) [data-store="product-item-labels"] {
+    left: 10px !important;
+    bottom: 10px !important;
+  }
+
+  :is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) :is([data-store="product-item-label-shipping"], [data-store="product-item-label-stock"], [data-store="product-item-offer-label"]) {
+    font-size: 8px !important;
+    letter-spacing: 0.05em !important;
+    padding: 0.3rem 0.45rem !important;
+  }
+
+  :is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) :is(.item-description, .item-description[data-store^="product-item-info-"]) {
+    padding-top: 0.7rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  :is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) :is([data-store^="product-item-name-"], .item-name) {
+    font-size: 12px !important;
+    letter-spacing: 0.06em !important;
+  }
+
+  :is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) .item-price-container :is(.item-price, [data-store^="product-item-price-"]) {
+    font-size: 12px !important;
+  }
+
+  :is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"], section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) :is(.price-compare, .js-compare-price-display) {
+    font-size: 9px !important;
+  }
+
+  :is(#complementary-products[data-store="complementary-products"], #related-products[data-store="related-products"]) :is(.item-actions a, .btn.btn-primary.btn-small[data-component="product-list-item.add-to-cart"], [data-component="product-list-item.add-to-cart"]),
+  :is(section[data-component="complementary-products"], section[data-component="related-products"], .section-products-related[data-store="complementary-products"], .section-products-related[data-store="related-products"]) :is(.item-actions .btn-link, .item-actions [data-component="product-list-item.add-to-cart"]) {
+    padding: 0.38rem 0.55rem !important;
+    font-size: 8px !important;
+    letter-spacing: 0.11em !important;
   }
 }
