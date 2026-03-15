@@ -14,6 +14,7 @@ Archivos incluidos:
 - 08-complementary-products-contexto.md: snapshot operativo del DOM de `#complementary-products`, con slider, card reutilizado, labels, CTA de quickshop y anchors CSS para productos complementarios.
 - 09-related-products-contexto.md: snapshot operativo del DOM de `#related-products`, con slider Swiper, cards con imagen secundaria, estados promocionales y anchors CSS para productos relacionados.
 - 10-theme-vs-source-y-estrategia.md: comparacion entre `theme.css` y los SCSS descargados por FTP, con criterio operativo para decidir cuando editar el theme base y cuando dejar una capa custom, minimizando overrides fragiles.
+- 11-optimizacion-is-selector-solucion.md: documentacion del problema de truncamiento CSS en Tienda Nube y como se resolvio compactando selectores con `:is()`, reduciendo el archivo de 131KB a 74KB. Incluye ejemplos antes/despues, lecciones aprendidas y estructura del archivo optimizado.
 
 Nota importante:
 
@@ -31,6 +32,7 @@ Uso recomendado:
 8. Usar 04-guidelines-diseno-editorial.md para mantener coherencia visual y evitar abrir caminos no validados.
 9. Usar 03-direccion-visual-zara.md para decidir tono visual y prioridades de refinamiento.
 10. Usar 10-theme-vs-source-y-estrategia.md para decidir en que capa conviene intervenir antes de escribir CSS nuevo.
+11. Leer 11-optimizacion-is-selector-solucion.md si el archivo crece y los estilos dejan de aplicarse, o antes de agregar bloques grandes de CSS nuevo.
 
 Conclusion operativa:
 
