@@ -1,0 +1,45 @@
+h1.h4 {
+    display: none ! Important;
+}
+body > footer > div.container-fluid > div:nth-child(1) > div:nth-child(3) > div > ul > li:nth-child(1) > a:before {
+    content: "+";
+}
+
+.btn-whatsapp svg {
+    width: 60px!important;
+    height: 60px!important;
+  
+}
+
+a.social-icon {
+    font-size: 25px;
+}
+
+#nav-hamburger > div > div.modal-scrollable-area > div.modal-body.nav-body > div > ul > li:nth-child(1) > a, body > header > div > div.row.d-none.d-md-block > div > div > ul > li:nth-child(1) > div.nav-item-container > a {
+    font-weight: bold;
+}
+
+
+.js-item-quickshop.item-actions.mt-3 {
+    visibility: visible !important;
+    opacity: 1 !Important;
+}
+
+.opacity-60 {
+    opacity: 1;
+}
+
+.form-options-content {
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 1);
+    border: 0;
+}
+
+
+body > header > div > div.row.d-none.d-md-block > div > div > ul > li:nth-child(1) > a {
+font-weight: bold;
+}
+
+.js-offer-label.label.label-accent {display: none; 
+}
